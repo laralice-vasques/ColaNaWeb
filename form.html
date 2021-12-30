@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Formulários</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+
+                <h2 style="text-align:center">Forms HTML</h2>
+
+                <h3>O elemento &lt;form&gt;</h3>
+
+                <p>O elemento HTML form é usado para criar um formulário HTML para entrada do usuário:
+                 Ele é um contêiner para diferentes tipos de elementos de entrada, como campos de texto, 
+                 caixas de seleção, botões de opção, botões de envio, etc...</p>
+
+                <p>
+                    &lt;form&gt; 
+                    .
+                    form elements
+                    .
+                    &lt;/form&gt;
+                </p>
+
+                <!-- ------------------Elemento input--------------------- -->
+
+                <h3>O elemento &lt;input&gt;</h3>
+
+                <p>O elemento HTML &lt;input&gt; é o elemento de formulário mais usado. 
+                    Um elemento &lt;input&gt; pode ser exibido de várias maneiras, dependendo do 
+                    atributo type:</p>
+
+                <table>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="text"&gt;</td>
+                        <td>Exibe um campo de entrada de texto de linha única.</td>
+                    </th>
+                    <tr>
+                        <td>&lt;input type="radio"&gt;</td>
+                        <td>Exibe um botão de opção (para selecionar uma das muitas opções - tomada de decisão).</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="checkbox"&gt;</td>
+                        <td>Exibe uma caixa de seleção (para selecionar zero ou mais de muitas opções).</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="submit"&gt;</td>
+                        <td>Exibe um botão de envio (para enviar o formulário).</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="button"&gt;</td>
+                        <td>Exibe um botão clicável</td>
+                    </tr>
+                </table>
+
+                <div style="text-align: center;">
+                    <p>Outros tipos de input:</p>
+                    <img src ="img/outrosInput.jpg" 
+                        width ="90%"
+                        title="Imagem com outros tipos de input">
+                </div>
+                
+                <!-- -----------------------Campos de texto------------------------ -->
+                <h3>Campos de texto</h3>
+
+                <p>O &lt;input type="text"&gt; define um campo de entrada de linha única para entrada de texto. O valor "text" para este atributo também é o valor substituto se o valor que você especificar para o atributo type for desconhecido pelo navegador</p>
+
+                <div class="divExemplos">
+                    &lt;form&gt;   <br>
+                        ..&lt;label for="fname"&gt;First name&lt;/label&gt;&lt;br&gt;   <br>
+                        ..&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;   <br>
+                        ..&lt;label for="lname"&gt;Last name&lt;/label&gt;&lt;br&gt;   <br>
+                        ..&lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;   <br>
+                    &lt;/form&gt;	   <br>
+
+                    <div class="divFilhaExemplos" style="text-align: center;">
+                        <form>
+                            <label for="fname">First name</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            <label for="lname">Last name</label><br>
+                            <input type="text" id="lname" name="lname"><br>
+                        </form>
+                    </div>
+                </div>
+
+                <p>Observe que o form em si não é visível (a tag &lt;form&gt;). Observe também que a largura padrão de um campo de entrada é de 20 caracteres</p>
+
+                <!-- --------------------Elemento label------------------------- -->
+                <h3>O elemento &lt;label&gt;</h3>
+
+                <p>O elemento &lt;label&gt; é um rótulo/informação pro usuário ver o que tem que inserir (aqui vai ser inserido seu nome, aqui vai ser inserido seu e-mail). Ele é utilizado por quem usa leitor de tela (é o conteúdo do elemento &lt;label&gt; que vai ser lido). </p>
+
+                <p>Inclusive, esse elemento também serve como uma área clicável, por exemplo, quanto temos um campo/radio button onde o campo para ser clicado é bem pequenininho, podemos clicar no próprio texto do elemento &lt;label&gt; que ele vai selecionar esse radio button.</p>
+
+                <p>--&gt;O atributo for da tag &lt;label&gt; deve ser igual ao atributo id do elemento &lt;input&gt; para vinculá-los.</p>
+
+                
+                <!-- -----------------------Radio buttons-------------------------- -->
+                <h3>Radio buttons</h3>
+
+                <p>O &lt;input type="radio"&gt; define um botão de opção (radio button). Os botões de opção permitem que o usuário selecione UM de um número limitado de opções:</p>
+
+                <div class="divExemplos">
+
+                    &lt;form&gt; <br>
+                    ..&lt;input type="radio" id="male" name="gender" value="male"&gt;<br>
+                    ..&lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;<br>
+                    ..&lt;input type="radio" id="female" name="gender" value="female"&gt;<br>
+                    ..&lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;<br>
+                    ..&lt;input type="radio" id="other" name="gender" value="other"&gt;<br>
+                    ..&lt;label for ="other"&gt;Other&lt;/label&gt;&lt;br&gt;<br>
+                    &lt;/form&gt;<br>
+
+                    <div class="divFilhaExemplos">
+                        <form>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label><br>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for ="other">Other</label><br>
+                        </form>
+                    </div>
+                
+                </div>
+                
+                <!-- -----------------------Caixas de seleção-------------------------- -->
+                <h3>Caixas de seleção</h3>
+
+                <p>O &lt;input type="checkbox"&gt; define uma caixa de seleção. As caixas de seleção permitem que o usuário selecione ZERO ou MAIS opções de um número limitado de escolhas:</p>
+
+                <div class="divExemplos">
+
+                    &lt;form> <br>
+                    ..&lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt; <br>
+                    ..&lt;label for="vehicle1">I have a bike&lt;/label&gt;<br>
+                    ..&lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt; <br>
+                    ..&lt;label for="vehicle2">I have a car&lt;/label&gt;<br>
+                    ..&lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt; <br>
+                    ..&lt;label for ="vehicle3">I have a boat&lt;/label&gt;<br>
+                    &lt;/form&gt; <br>
+
+                    <div class="divFilhaExemplos">
+                        <form>
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1">I have a bike</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2">I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for ="vehicle3">I have a boat</label><br>
+                        </form>
+                    </div>
+                
+                </div>
+
+                <p>Na hora de submeter os dados pro servidor, se não tiver o atributo name declarado no container formulário, esses dados não serão enviados.</p>
+
+                <!-- -----------------------O botão enviar-------------------------- -->
+                <h3>O botão enviar</h3>
+
+                <p>O &lt;input type="submit"&gt; type submit define um botão para enviar os dados do formulário a um manipulador de formulários. O manipulador de formulários é normalmente um arquivo no servidor com um script para processar dados de entrada. O manipulador de formulários é especificado no atributo action do formulário.</p>
+
+                <div class="divExemplos">
+
+                    &lt;form action="aqui vai o link pro script"&gt; <br>
+                    ..&lt;label for="fname"&gt;First name&lt;/label&gt;&lt;br&gt;<br>
+                    ..&lt;input type="text" id="fname" name="fname" value="James"&gt;&lt;br&gt;<br>
+                    ..&lt;label for="lname"&gt;Last name&lt;/label&gt;&lt;br&gt;<br>
+                    ..&lt;input type="text" id="lname" name="lname" value="Bond"&gt;&lt;br&gt;&lt;br&gt;<br>
+                    ..&lt;input type="submit" value="Submit"&gt;<br>
+                    &lt;/form&gt;<br><br>
+
+                    <div class="divFilhaExemplos" style="text-align: center;">
+                        <form action="aqui vai o link pro script">
+                            <label for="fname">First name</label><br>
+                            <input type="text" id="fname" name="fname" value="James"><br>
+                            <label for="lname">Last name</label><br>
+                            <input type="text" id="lname" name="lname" value="Bond"><br><br>
+                            <input type="submit" value="Submit">
+                        </form>	
+
+                        <p><strong>Nota:</strong> Esse botão não vai encontrar um arquivo porque não definimos um script.</p>
+                    </div>
+                
+                </div>
+
+                <p>
+                    O botão do tipo submit (ele se diferencia de um botão comum porque esse é do tipo submit) que põe em ação o que estiver definido no script do atributo action, então lá no início do formulário tem o atributo action cujo valor dele é uma página de script. Também poderia usar um script JavaScript que colocaria em ação uma funcionalidade armazenada nesse script - normalmente é armazenar no banco de dados ou atualizar a página com essas informações. Esse script pode estar tanto na página web quanto em um arquivo externo. 
+                </p>
+
+                <p>Quando clica no submit ele tenta através do GET (metodo padrão) buscar o conteúdo da página indicada. Os métodos para HTML, são as formas que o http vai enviar esses dados do formulário pro servidor. Tem o metodo GET e o metodo POST.</p>
+
+                
+                <!-- -----------------------O atributo de method-------------------------- -->
+                <h3>O atributo de method</h3>
+
+                <p>O atributo do method especifica o método HTTP a ser usado ao enviar os dados do formulário. Os dados do formulário podem ser enviados como variáveis de URL (com method ="get") ou como transação HTTP post (com method="POST"). O método HTTP padrão ao enviar dados do formulário é GET.</p>
+
+                <p><strong>Notas sobre GET:</strong></p>
+
+                <ul type = "circle">
+                <li>
+                    anexa os dados do formulário ao URL, em pares nome valor
+                </li>
+                <li>
+                    NUNCA use GET para enviar dados confidenciais!(os dados enviados são visíveis no URL!)
+                </li>
+                <li>
+                    O comprimento de um URL é limitado (2048 caracteres)
+                </li>
+                <li>
+                    Útil para envios de formulários onde um usuário deseja marcar o resultado
+                </li>
+                <li>
+                    GET é bom para dados não seguros, como strings de consulta no Google
+                </li>
+                </ul>
+
+                <p><strong>Notas sobre POST:</strong></p>
+
+                <ul type = "circle">
+                <li>
+                    Acrescenta os dados do formulário dentro do corpo da solicitação HTTP (os dados enviados não são mostrados no URL)
+                </li>
+                <li>
+                    O POST não tem limitações de tamanho e pode ser usado para enviar grandes quantidades de dados
+                </li>
+                <li>
+                    Os envios de formulários com POST não podem ser marcados.
+                </li>
+                </ul>
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

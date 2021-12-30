@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Sintaxe CSS</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+
+                <h2 style="text-align:center">CSS</h2>
+
+                <h3>Sintaxe CSS</h3>
+
+                <p>A sintaxe do CSS consiste principalmente em uma coleção de seletores associados a blocos declarativos de instruções. O seletor aponta para o elemento HTML que desejamos estilizar. O bloco de declaração contém uma ou mais declarações separadas por ponto e vírgula. Cada declaração inclui um nome de propriedade CSS e um valor separados por dois pontos. Várias declarações CSS são separadas por ponto e vírgula e os blocos de declaração são cercados por chaves:</p>
+
+                <div style="text-align:center">
+                    <img src ="img/css.jpg" style="width: 90%;">
+                </div><br>
+
+                <p>Neste exemplo todos os elementos p estão alinhados ao centro e em vermelho</p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    <p>
+                        p { <br>
+                        ..color: red; <br>
+                        ..text-align: center; <br>
+                        } <br>
+                    </p>
+                </div>
+
+                <ul type = "circle">
+                <li>
+                    p é um seletor em CSS (aponta para o elemento HTML que desejamos estilizar: &lt;p&gt;
+                </li>
+                <li>
+                    color é uma propriedade CSS e red é o valor da propriedade
+                </li>
+                <li>
+                    text align é uma propriedade e center é o valor da propriedade
+                </li>
+                </ul>
+
+                <!-- ------------------Seletores CSS-------------------- -->
+                <h3>Seletores CSS</h3>
+
+                <p>Os seletores CSS são usados para "encontrar"(ou selecionar) os elementos HTML que desejamos estilizar. Podemos dividir os seletores CSS em cinco categorias.</p>
+
+                <ul type = "circle">
+                <li>
+                    Seletores simples seleciona os elementos com base no nome, id, classe
+                </li>
+                <li>
+                    Seletores combinados seleciona os elementos com base em uma relação específica entre eles
+                </li>
+                <li>
+                    Seletores de pseudo classe seleciona os elementos com base em um determinado estado
+                </li>
+                <li>
+                    Seletores de pseudo elementos selecione e estilize uma parte de um elemento
+                </li>
+                <li>
+                    Seletores de atributos selecione elementos com base em um atributo ou valor de atributo
+                </li>
+                </ul>
+
+                <p><strong>Seletores de Id</strong></p>
+                
+                <p>O seletor de id usa o atributo id de um elemento HTML para selecionar um elemento 
+                    específico. O id de um elemento é único dentro de uma página, então o seletor de 
+                    id é usado para selecionar um elemento único. Para selecionar um elemento com um 
+                    id específico, usamos um caractere hash seguido pelo id do elemento:</p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    #para1 { <br>
+                    ..text-align: center;<br>
+                    ..color: red;<br>
+                    }<br>
+                </div>
+
+                <p><strong>O seletor de classe</strong></p>
+                
+                <p>Este seletor seleciona elementos HTML com um atributo de classe específico. 
+                    Para selecionar elementos com uma classe específica, escrevemos um ponto (.), 
+                    seguido do nome da classe:
+                <br><br><br>
+                Também podemos especificar que apenas elementos HTML específicos devem ser afetados 
+                dentro de uma classe:</p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    .center { <br>
+                    ..text-align: center;<br>
+                    ..color: red;<br>
+                    }<br>
+                    <br>
+                    p .center {<br>
+                    ..text-align: center;<br>
+                    ..color: red;<br>
+                    }<br>
+                </div>
+
+                <p><strong>O seletor de universal</strong></p>
+
+                <p>O seletor universal seleciona todos os elementos HTML na página. A regra CSS 
+                    abaixo afetará todos os elementos HTML da página:</p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    * {<br>
+                    ..text-align: center;<br>
+                    ..color: red;<br>
+                    }<br>
+                </div>
+
+                <!-- ------------------Formas de inserir CSS-------------------- -->
+                <h3>Formas de inserir CSS</h3>
+
+                <p>Quando um navegador lê uma folha de estilo, ele formata o documento HTML de acordo com as informações na folha de estilo. Existem três maneiras de inserir uma folha de estilo:</p>
+                
+                <ul type = "circle">
+                <li>
+                    CSS externo
+                </li>
+                <li>
+                    CSS interno
+                </li>
+                <li>
+                    CSS inline
+                </li>
+                </ul>
+
+                <!-- ------------------CSS Externo-------------------- -->
+                <p><strong>CSS externo</strong></p>
+
+                <p>Com uma folha de estilo externa, podemos alterar a aparência de um site inteiro 
+                    alterando apenas um arquivo. Cada página HTML deve incluir uma referência ao arquivo 
+                    de folha de estilo externo dentro do elemento &lt;link&gt; dentro da seção head.
+                    <br><br><br>
+                    Uma folha de estilo externa pode ser escrita em qualquer editor de texto e deve 
+                    ser salva com uma extensão .css. O arquivo .css externo não deve conter nenhuma 
+                    tag HTML. Esta é a aparência do arquivo "style.css":
+                    </p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    &lt;!DOCTYPE html&gt; <br>
+                    &lt;html&gt;<br>
+                    ..&lt;head&gt;<br>
+                    ....<span style="color: royalblue;">&lt;link rel="stylesheet" 
+                        href="mystyle.css"&gt;</span><br>
+                    ..&lt;head&gt;<br>
+                    ..&lt;body&gt;<br>
+                    ....&lt;h1&gt; Isso é um título&lt;/h1&gt;<br>
+                    ....&lt;p&gt; Isso é um parágrafo&lt;/p&gt;<br>
+                    ..&lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                    <br>
+                    <span style="color: royalblue;">body {<br>
+                    ..background-color: lightblue;	<br>
+                    }<br>
+                    ..h1 {<br>
+                    ..color: navy;<br>
+                    ..margin-left: 20px;<br>
+                    }</span>
+                </div>
+
+                <!-- ------------------CSS interno-------------------- -->
+                <p><strong>CSS interno</strong></p>
+
+                <p>Uma folha de estilo interna pode ser usada se uma única página HTML 
+                    tiver um estilo exclusivo. O estilo interno é definido dentro do 
+                    elemento &lt;style&gt;, dentro da seção head.</p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    &lt;head&gt;<br>
+                    ..<span style="color: royalblue;">&lt;style&gt;<br>
+                    ..h1 {<br>
+                    ....color: maroon;<br>
+                    ....margin-left: 40px;<br>
+                    ..}<br>
+                    ..&lt;/style&gt;</span><br>
+                    &lt;/head&gt;<br>
+                </div>
+
+                <!-- ------------------CSS Inline-------------------- -->
+                <p><strong>CSS inline</strong></p>
+
+                <p>Um estilo embutido (inline) pode ser usado para aplicar um estilo a um 
+                    único elemento. Para usar estilos embutidos, adicionamos o atributo de 
+                    estilo ao elemento relevante. O atributo style pode conter qualquer 
+                    propriedade CSS.</p>
+
+                <div style="width: 65%; height: 50%; border: 1px solid black; padding: 20px; margin: auto;">
+                    &lt;h1 <span style="color: royalblue;">style="color:blue;text-align:center;"</span>&gt;Isso é um título&lt;/h1&gt;<br>
+                    &lt;p <span style="color: royalblue;">style="color: red;"</span>&gt;Isso é um parágrafo&lt;/p&gt;
+                </div>
+
+
+                <!-- ------------------------Ordem de cascata-------------------- -->
+                <h3>Ordem de cascata</h3>
+
+                <p>Que estilo será usado quando houver mais de um estilo especificado para um elemento HTML?</p>
+                <p>Todos os estilos em uma página serão "cascateados" em uma nova folha de estilo virtual pelas seguintes regras, onde o número 1 tem a prioridade mais alta:</p>
+
+                <ol>
+                <li>
+                    Estilo embutido (dentro de um elemento HTML);
+                </li>
+                <li>
+                    Folhas de estilo externas e internas (na seção principal);
+                </li>
+                <li>
+                    Padrão do navegador.
+                </li>
+                </ol>
+
+                <p>Portanto, um estilo embutido tem a prioridade mais alta e substituirá os estilos externos e internos e os padrões do navegador.</p>
+
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

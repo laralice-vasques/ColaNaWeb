@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Media Queries</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa principal-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para o exemplo de media querie-->
+        <link rel="stylesheet" type="text/css" href ="css/styleExemploMediaQuerie.css">
+
+		<!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+                <h2 style="text-align:center">Media Queries</h2> <br>
+
+                <h3>CSS3 Media Queries</h3>
+
+                <p>As consultas de mídia em CSS 3 (media queries) estenderam a ideia de tipos de mídia (@media) do
+                    CSS 2: em vez de procurar um tipo de dispositivo, elas olham para a capacidade do dispositivo. As
+                consultas de mídia podem ser usadas para verificar muitas coisas, como:</p>
+
+                <ul type = "circle">
+                    <li>
+                        largura e altura da janela de visualização (viewport);
+                    </li>
+                    <li>
+                        largura e altura do dispositivo;
+                    </li>
+                    <li>
+                        orientação (o tablet telefone está no modo paisagem ou retrato?);
+                    </li>
+                    <li>
+                        Resolução;
+                    </li>
+                </ul>
+
+                <p>O uso de consultas de mídia é uma técnica popular para fornecer uma folha de estilo personalizada para
+                    desktops, laptops, tablets e telefones celulares (como telefones iPhone e Android).</p>
+
+                <h3>Media Queries sintaxe</h3>
+
+                <p>Uma consulta de mídia pode conter uma ou mais expressões, que são resolvidas como verdadeiras 
+                    ou falsas: </p>
+
+                <p>@media not|only mediatype and (expressions){
+                    CSS Code;    
+                }</p>
+
+                <p>O resultado da consulta é verdadeiro se o tipo de mídia especificado corresponder ao tipo de
+                    dispositivo no qual o documento está sendo exibido e todas as expressões na consulta de mídia 
+                    forem verdadeiras. Quando uma consulta de mídia é verdadeira, a folha de estilo ou as 
+                    regras de estilo correspondentes são aplicadas, seguindo as regras normais em cascata.</p>
+
+                <p>A menos que você usemos os operadores not ou only o tipo de mídia é opcional e o tipo all estará
+                    implícito</p>
+
+                <p>Também podemos ter diferentes folhas de estilo para diferentes mídias:</p>
+
+                &lt;link rel="stylesheet" media="mediatype and|not|only (expressions) href="print.css"&gt;
+
+                <br><br>
+
+                <!--Folha de estilos externa para o exemplo de media querie-->
+                <div class="wrapper" style="border: 1px solid black; padding: 10px; background-color: rgba(192,192,192, 0.2);">
+                    <div id="leftsidebar">
+                    <ul id="menulist">
+                        <li class="menuitem">Menu-item 1</li>
+                        <li class="menuitem">Menu-item 2</li>
+                        <li class="menuitem">Menu-item 3</li>
+                        <li class="menuitem">Menu-item 4</li>
+                        <li class="menuitem">Menu-item 5</li>
+                    </ul>
+                </div>
+                    
+                <div id="main">
+                    <h1>Redimencione o navegador pra ver o efeito!</h1>
+
+                    <p>Este exemplo mostra um menu que flutuará à esquerda da página se a janela de 
+                        visualização tiver 480 pixels de largura ou mais. Se a janela de visualização 
+                        tiver menos de 480 pixels, o menu ficará na parte superior do conteúdo.
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

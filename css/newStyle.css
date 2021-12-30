@@ -1,0 +1,476 @@
+
+                   /*-------------- FOLHA DE ESTILOS PRINCIPAL--------------*/
+
+    
+    /*-------------- Todos os títulos do site--------------*/
+
+    h1 {/*-------------- Título principal - header --------------*/
+        color: #2b8ba3;
+        animation-name: animacaoDoTitulo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animacaoDoTitulo {
+        0% {color: #2c8fa8}
+        13% {color: #4091dd}
+        25% {color: rgb(70, 106, 216);}
+        33% {color: #1f87a1}
+        50% {color: rgb(108, 179, 201);}
+        63% {color: #727cdd}
+        75% {color: rgb(35, 128, 100);}
+        83% {color: #abafcfb7}
+        100% {color: rgb(162, 102, 223);}
+    }
+
+    h2 {
+        color: #0000FF;
+        text-align: center;
+    }
+    h3, strong{
+        color: #4169E1;
+    }
+
+    /* ----------------Todo o corpo texturizado-------------*/
+    body {
+        background-color: rgba(192,192,192, 0.1);
+        background-image:
+            radial-gradient(circle at 100% 150%, rgba(192,192,192, 0.03) 24%, white 24%, white 28%, rgba(192,192,192, 0.03) 28%, rgba(192,192,192, 0.03) 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 0    150%, rgba(192,192,192, 0.03) 24%, white 24%, white 28%, rgba(192,192,192, 0.03) 28%, rgba(192,192,192, 0.03) 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 50%  100%, white 10%, rgba(192,192,192, 0.01) 10%, rgba(192,192,192, 0.01) 23%, white 23%, white 30%, rgba(192,192,192, 0.03) 30%, rgba(192,192,192, 0.03) 43%, white 43%, white 50%, rgba(192,192,192, 0.03) 50%, rgba(192,192,192, 0.03) 63%, white 63%, white 71%, transparent 71%, transparent),
+            radial-gradient(circle at 100% 50%, white 5%, rgba(192,192,192, 0.03) 5%, rgba(192,192,192, 0.03) 15%, white 15%, white 20%, rgba(192,192,192, 0.03) 20%, rgba(192,192,192, 0.03) 29%, white 29%, white 34%, rgba(192,192,192, 0.03) 34%, rgba(192,192,192, 0.03) 44%, white 44%, white 49%, transparent 49%, transparent),
+            radial-gradient(circle at 0    50%, white 5%, rgba(192,192,192, 0.03) 5%, rgba(192,192,192, 0.03) 15%, white 15%, white 20%, rgba(192,192,192, 0.03) 20%, rgba(192,192,192, 0.03) 29%, white 29%, white 34%, rgba(192,192,192, 0.03) 34%, rgba(192,192,192, 0.03) 44%, white 44%, white 49%, transparent 49%, transparent);
+        background-size: 100px 50px;
+        text-align: justify;
+    }
+    
+    /* ----------------Elementos sem a propriedade margem-------------*/
+    * {
+        box-sizing: border-box;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+    
+    /*-----------------Define a fonte do site-------------*/
+    html {
+        font-family: "Lucida Sans", sans-serif;
+    }
+    
+    /*-----------------Lista do menu-------------*/
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ----------------Cada item de lista do menu ------------*/  
+    .menu li {
+        padding: 8px;
+        margin-bottom: 7px;
+        background-color: #90c6dab2;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    
+    .menu li:hover {
+        background-color: #1f8a92;
+    }
+
+    /* ----------------Estilos para os links ------------*/ 
+    a:link {
+        text-decoration: none;
+    }
+       
+    a:hover {
+     text-decoration: underline;
+        color: #ffffff;
+    }
+    
+    /* ----------------Calculadora - quadro da direita ------------*/ 
+    .aside {
+        background-color: #90c6dab2;
+        padding: 15px;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    /* ----------------O topo da página e meu rodapé  ------------*/ 
+    footer, header {
+        background-color: #DCDCDC;
+        color: #2b8ba3;
+        font-size: 12px;
+        padding: 15px;
+        position: relative;
+        height: 50%;
+    }
+  
+    /* Para computador: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 20%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 60%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    @media only screen and (max-width: 768px) {
+        /* Para celular: */
+        [class*="col-"] {
+        width: 100%;
+        }
+    }
+
+    /* -------------------Todas as tabelas centralizadas-------------------*/
+    table {
+        margin: auto;
+    }
+
+    th, td {
+        margin: auto;
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+  /* -------------------Todas as divs de exemplos de códigos-------------------*/
+  .divExemplos {
+      border: 1px solid black;
+      background-color: rgba(192,192,192, 0.2);
+      margin: auto;
+      padding: 10px;
+      position: relative;
+  }
+
+  .divFilhaExemplos{
+    width: 65%; 
+    height: 50%; 
+    border: 1px solid black; 
+    padding: 20px; 
+    margin: auto;
+  }
+
+  .codigo{
+      color: gray;
+  }
+
+  /*---------------------------------Aba de cores----------------------------------*/
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.caixinhaCor {/* ---Caixinha de cor na aba de cores----- */
+  width: 160px;
+  padding: 25px;
+  margin: 15px;
+  float: center;
+  text-align: center; 
+}
+
+.caixinhaFlex { /* ----Caixinha da aba de transformações e transições--- */
+    border: 1px;
+    border-style: dotted;
+    margin: 10px;
+    float: center;
+    text-align: center; 
+  }
+
+
+/* --------------------------- Transições CSS ---------------------------- */
+
+.transicaoEx1 {
+    width: 100px;
+    height: 100px;
+    background: royalblue;
+    transition: width 2s;
+    }
+
+.transicaoEx1:hover {
+    width: 300px;
+}
+
+.transicaoEx2 {
+    width: 100px;
+    height: 100px;
+    background: royalblue;
+    transition: width 2s;
+    transition-delay: 1s;
+    }
+
+.transicaoEx2:hover {
+    width: 300px;
+}
+
+.transicaoEx3 {
+    width: 100px;
+    height: 100px;
+    background: royalblue;
+    transition: width 2s, height 2s, transform 2s;
+    }
+
+.transicaoEx3:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+
+
+/* -------------------------------Página de animações------------------- */
+@keyframes exemplo1 {
+    from{
+        background-color: silver;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+
+.animacao1 {
+    width: 150px;
+    height: 150px;
+    background-color: silver;
+    animation-name: exemplo1;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes exemplo2 {
+    0% {background-color: silver;}
+    25% {background-color: royalblue;}
+    50% {background-color: greenyellow;}
+    75% {background-color: orange;}
+    100% {background-color: rebeccapurple;}
+}
+
+.animacao2 {
+    width: 150px;
+    height: 150px;
+    background-color: silver;
+    animation-name: exemplo2;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes exemplo3 {
+    0% {background-color: red; align-self: flex-end; left: 0px; top: 0px;}
+    25% {background-color: yellow; justify-content: flex-end; left: 50%; top: 0px;}
+    50% {background-color: blue; left: 50%; top: 50%;}
+    75% {background-color: green; left: 0px; top: 50%;}
+    100% {background-color: red; left: 0px; top: 0px;}
+}
+
+.animacao3 {
+    width: 150px;
+    height: 150px;
+    background-color: silver;
+    position: relative;
+    animation-name: exemplo3;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes exemplo4 {
+    from {left: 0%;}
+    to {left: 85%;}
+}
+
+.animacao4-div1 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(69, 210, 235);
+    border: black 1px solid;
+    font-weight: bold;
+    position: relative;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: exemplo4;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.animacao4-div2 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(69, 210, 235);
+    border: black 1px solid;
+    font-weight: bold;
+    position: relative;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: exemplo4;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+.animacao4-div3 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(69, 210, 235);
+    border: black 1px solid;
+    font-weight: bold;
+    position: relative;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: exemplo4;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.animacao4-div4 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(69, 210, 235);
+    border: black 1px solid;
+    font-weight: bold;
+    position: relative;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: exemplo4;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+.animacao4-div5 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(69, 210, 235);
+    border: black 1px solid;
+    font-weight: bold;
+    position: relative;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: exemplo4;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* -----------------------------*/
+/* Exemplos de propriedade position na página CSS position */
+
+.posicaoEstatica{
+    position: static;
+    border: 3px solid #73AD21;
+}
+
+.posicaoRelativa{
+    position: relative;
+    left: 30px;
+    border: 3px solid #73AD21;
+}
+
+.posicaoFixa{
+    position: fixed;
+    bottom: 150px;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+.posicaoRelativaPaiAbsoluto{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+}
+.posicaoAbsoluta {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+.posicaoAderente {
+    position: sticky;
+    top: 0;
+    background-color: #3fdfaf;
+    border: 2px solid #4CAF50;
+}
+
+/* -----------------Elementos sobrepostos---------------- página CSS position */
+
+.containerElemSobrepostos {
+    background-color: white;
+    width: 100%;
+    height: 440px;
+    position: relative;
+    align-content: center;
+    border: 1px dashed black;
+}
+
+.elementoSobreposto {
+    padding: 10px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+#abs1 {
+    z-index: 5;
+    position: absolute;
+    width: 150px;
+    height: 420px;
+    top: 10px;
+    left: 10px;
+    border: 1px dashed #900;
+    background-color: #fdd;
+}
+
+#abs2 {
+    z-index: 1;
+    position: absolute;
+    width: 150px;
+    height: 420px;
+    top: 10px;
+    right: 10px;
+    border: 1px dashed #900;
+    background-color: #fdd;
+}
+
+#rel1 {
+    z-index: 3;
+    height: 130px;
+    position: relative;
+    top: 30px;
+    border: 1px dashed #696;
+    background-color: #cfc;
+    margin: 0px 50px 0px 50px;
+}
+
+#rel2 {
+    z-index: 2;
+    height: 130px;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    border: 1px dashed #696;
+    background-color: #cfc;
+    margin: 0px 50px 0px 50px;
+}
+
+#sta1 {
+    z-index: 8;
+    height: 110px;
+    border: 1px dashed #996;
+    background-color: #ffc;
+    margin: 0px 50px 0px 50px;
+}
+
+
+
+ 

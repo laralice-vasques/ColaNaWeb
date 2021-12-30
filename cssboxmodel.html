@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>CSS Box Model</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+                <h2>CSS Box Model</h2>
+
+                <h3>Box Model</h3>
+
+                <p>Em uma página WEB, todos os elementos HTML podem ser considerados caixas boxes. 
+                    Determinar o tamanho, propriedades como cor, fundo, estilo das bordas e a posição 
+                    desses boxes é o objetivo do mecanismo de renderização.</p>
+
+                <p>No CSS, cada um desses boxes retangulares é descrito usando o box model padrão. 
+                    Este modelo descreve <span style="color: royalblue;">o conteúdo do espaço ocupado 
+                        por um elemento</span>.</p>
+
+                <p>Então o box model nada mais é do que a combinação de 4 propriedades que se somam 
+                    para ocupar um determinado espaço dentro da nossa página HTML.</p>
+
+                <ul type = "circle">
+                <li>
+                    margin edge (margem);
+                </li>
+                <li>
+                    border edge (borda);
+                </li>
+                <li>
+                    padding edge (preenchimento);
+                </li>
+                <li>
+                    content edge(conteúdo).
+                </li>
+                </ul>
+
+                <p>Em CSS, o termo "box model" é usado para falar sobre design e layout 
+                    (como organizar e desenhar os elementos dentro da página e como eles vão se comportar). 
+                    O modelo de caixa CSS é essencialmente uma caixa que envolve todos os elementos HTML. 
+                    Consiste em margens, bordas, preenchimento e o conteúdo real.</p>
+
+                <p>Outros comportamentos do box model podem ser definidos usando a propriedade CSS box 
+                    sizing. Esta propriedade define como a largura e a altura de um elemento
+                     serão calculadas.</p>
+
+                <p>A imagem a seguir ilustra o box model:</p>
+
+                <div style="text-align: center;">
+                    <img src ="img/box-model.jpg" style="width: 70%;">
+                </div>
+
+                <ul type = "circle">
+                    <li>
+                        <em>Content</em>: O conteúdo da caixa, onde o texto e as imagens aparecem.
+                    </li>
+                    <li>
+                        <em>Padding</em>: Reserva uma área ao redor do conteúdo com preenchimento transparente.
+                    </li>
+                    <li>
+                        <em>Border</em>: Uma borda que circunda o preenchimento e o conteúdo.
+                    </li>
+                    <li>
+                        <em>Margin</em>: Reserva uma área fora da borda. A margem é transparente.
+                    </li>
+                </ul>
+
+                <div class="divExemplos">
+
+                    &lt;div style=" <br>
+                    text-align: justify; <br>
+                    width: 300px; <br>
+                    border: 15px solid royalblue; <br>
+                    padding: 15px; <br>
+                    margin: auto; <br>
+                    "&gt;
+                    <br>Esse é o texto da nossa div com alinhamento justificado,<br>largura de 300px, 
+                    margem de 20px, preenchimento de 15px<br>e borda de 15px na cor azul royal. <br>
+                    &lt;/div&gt;
+
+                    <div style="
+                        text-align: justify;
+                        width: 300px;
+                        border: 15px solid royalblue;
+                        padding: 15px;
+                        margin: auto;
+                        ">Esse é o texto da nossa div, alinhamento justificado, largura de 300px, 
+                        margem de 20px, preenchimento de 15px e borda de 15px na cor azul royal.    
+                    </div>                            
+                </div>
+
+                <!-- --------------Width e Height de um Elemento:------------------ -->
+                <h3>Width e Height de um Elemento:</h3>
+
+                <p>Para definir a largura e a altura de um elemento corretamente em todos os navegadores, precisamos saber como funciona o modelo de caixa.</p>
+
+                <p style="text-align: center; color: royalblue;"><strong>Importante:</strong> ao definir as propriedades de largura e altura de um elemento com CSS, estamos apenas definindo a largura e a altura da área de conteúdo.</p>
+
+                <p>Para calcular o tamanho total de um elemento, devemos adicionar preenchimento, bordas e margens.</p>
+
+                Aqui está o cálculo:
+
+                <ul type = "circle">
+                <li>
+                    320 px (largura)
+                </li>
+                <li>
+                    +20 px (preenchimento esquerdo + direito)
+                </li>
+                <li>
+                    +10 px (borda esquerda + direita)
+                </li>
+                <li>
+                    0 px (margem esquerda + direita)
+                </li>
+                <li>
+                =350 px
+                </li>
+                </ul>		
+
+                A <strong>largura</strong> total de um elemento deve ser calculada assim: Largura total do elemento = largura preenchimento esquerdo + preenchimento direito + borda esquerda + borda direita + margem esquerda + margem direita</p>
+
+                <p>A <strong>altura</strong> total de um elemento deve ser calculada assim: Altura total do elemento = altura preenchimento superior + preenchimento inferior + borda superior + borda inferior + margem superior + margem inferior</p>
+
+                <div class="divExemplos">
+                
+                    &lt;img src="img/lotus.jpg" width ="350" height = "350"&gt;
+                    <br><br>
+                    <p>E esse é o código da div abaixo da imagem, somando tudo o resultado é o 
+                        tamanho da imagem.</p>
+                    <br>
+                    &lt;div style=" <br>
+                    ..width: 320px;<br>
+                    ..padding: 10px;<br>
+                    ..border: 5px solid gray;<br>
+                    ..margin: 0;" <br>
+                    &gt;<br>
+                    A imagem acima tem 350px de largura e 350px de atura.<br>
+                    &lt;/div&gt; <br> 
+
+                    <div class="divFilhaExemplos">
+                        <img src="img/lotus.jpg" width ="350" height = "350">
+
+                        <div style="
+                            width: 320px;
+                            padding: 10px;
+                            border: 5px solid gray;
+                            margin: 0;
+                            font-family: 'Times New Roman', Times, serif;
+                            box-sizing: content-box;" 
+                        >
+    <!-- --------------o (box-sizing: content-box) é para esse elemento n ficar box-border pq no estilo ta universal------------------ -->
+                            A imagem do lótus acima tem 350px de largura e 350px de atura.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- --------------CSS borders------------------ -->
+                <h3>CSS borders</h3>
+                
+                <p>As propriedades CSS border permitem que você especifique o estilo, a largura e a cor da borda de um elemento. A propriedade border-style especifica o tipo de borda a ser exibida:</p>
+
+                <ul type = "circle">
+                <li>
+                    dotted - Define uma borda pontilhada
+                </li>
+                <li>
+                    dashed - Define uma borda tracejada
+                </li>
+                <li>
+                    solid - Define uma borda sólida
+                </li>
+                <li>
+                    double Define uma borda dupla
+                </li>
+                <li>
+                    groove - Define uma borda com ranhuras 3 D O efeito depende do valor da cor da borda
+                </li>
+                <li>
+                    ridge - Define uma borda com estrias 3 D O efeito depende do valor da cor da borda
+                </li>
+                <li>
+                    inset - Define uma borda inserida 3 D O efeito depende do valor da cor da borda
+                </li>
+                <li>
+                    outset - Define uma borda de início 3 D O efeito depende do valor da cor da borda
+                </li>
+                <li>
+                    none - Define sem borda
+                </li>
+                <li>
+                    hidden - Define uma borda oculta
+                </li>
+                </ul>
+
+                <!-- --------------CSS border-width------------------ -->
+                <p><strong>CSS border-width</strong></p>
+
+                <p>A propriedade border-width especifica a largura das quatro bordas. 
+                    A largura pode ser definida como um tamanho específico (px, pt, cm, em, etc...
+                     ou usando um dos três valores predefinidos thin, medium ou thick. 
+                     A propriedade border-width pode ter de um a quatro valores (para a borda superior, 
+                     borda direita, borda inferior e borda esquerda):</p>
+
+                <div class="divExemplos">
+
+                    p.three { <br>
+                    ..border-style: solid;<br>
+                    ..border-width: 25px 10px 4px 35px; <span style="color: gray;">/* top, right, bottom e left*/</span><br>
+                    }<br>
+                
+                </div>
+
+                <p><strong>CSS border-color</strong></p>
+
+                <p>A propriedade border-color é usada para definir a cor das quatro bordas e pode 
+                    ter de um a quatro valores (para a borda superior, borda direita, borda 
+                    inferior e borda esquerda):<br><br>
+                    <strong>Nota:</strong> Se a cor da borda não for definida, ela herda a cor 
+                    do elemento.
+                </p>
+
+                <div class="divExemplos">
+
+                    p.one { <br>
+                    ..border-style: solid;<br>
+                    ..border-color: red green blue yellow; <span style="color: gray;">/* top, right , bottom and left</span><br>
+                    }
+                
+                </div>
+
+                <p><strong>CSS border (Lados individuais)</strong></p>
+
+                <p>
+                    <p>É possível especificar uma borda diferente para cada lado. Então, é assim que 
+                        funciona: se a propriedade border-style tiver <strong>quatro</strong> valores 
+                        "border-style: dotted solid double dashed" 
+                    </p>
+
+                    <ul type = "circle">
+                        <li>
+                            borda superior é pontilhada
+                        </li>
+                        <li>
+                            borda direita é sólida
+                        </li>
+                        <li>
+                            borda inferior é dupla
+                        </li>
+                        <li>
+                            borda esquerda é tracejada
+                        </li>
+                    </ul>
+                    
+                    <p>Se a propriedade border-style tiver <strong>três</strong> valores "border-style: 
+                        dotted solid double"
+                    </p>
+
+                    <ul type = "circle">
+                        <li>
+                            borda superior é pontilhada
+                        </li>
+                        <li>
+                            borda direita e esquerda são sólidas
+                        </li>
+                        <li>
+                            borda inferior é dupla
+                        </li>
+                    </ul>
+                        
+                    <p>Se a propriedade border-style tiver <strong>dois</strong> valores "border-style: dotted solid"
+
+                    <ul type = "circle">
+                        <li>
+                            borda superior e inferior são pontilhadas
+                        </li>
+                        <li>
+                            borda direita e esquerda são sólidas
+                        </li>
+                    </ul>
+
+                    <p>Se a propriedade border-style tiver <strong>um</strong> valor "border-style dotted"</p>
+
+                    <ul type = "circle">
+                        <li>
+                            todas as bordas são pontilhadas
+                        </li>
+                    </ul>
+                </p>
+
+                <div class="divExemplos">
+
+                    p{ <br>
+                    ..border-top-style: dotted;<br>
+                    ..border-right-style: solid;<br>
+                    ..border-bottom-style: dotted;<br>
+                    ..border-left-style: solid;<br>
+                    }
+                    
+                    <p>O exemplo acima aplica o mesmo efeito que a declaração a seguir:<p>
+                        
+                    p {<br>
+                    ..border-style: dotted solid;<br>
+                    }
+                
+                </div>
+
+                <p><strong>CSS border (forma abreviada)</strong></p>
+
+                <p>
+                    <p>Para encurtar o código, também é possível especificar todas as propriedades individuais da borda em
+                        uma propriedade. A propriedade border é uma propriedade abreviada para as seguintes propriedades de borda
+                        individuais: </p>
+
+                    <ul type = "circle">
+                        <li>
+                            border-width
+                        </li>
+                        <li>
+                            border-style (obrigatório)
+                        </li>
+                        <li>
+                            border-color
+                        </li>
+                    </ul>
+                </p>
+
+                <div class="divExemplos">
+
+                    p { <br>
+                    ..border: 5px solid red;<br>
+                    }
+                
+                </div>
+
+                <p><strong>CSS border-radius</strong></p>
+
+                <p>A propriedade border-radius é usada para adicionar bordas arredondadas 
+                    a um elemento</p>
+
+                <div class="divExemplos">
+
+                    p { <br>
+                    ..border: 2px solid red;<br>
+                    ..border-radius: 5px;<br>
+                    }
+                
+                </div>
+                
+                <!-- --------------CSS margin------------------ -->
+                <h3>CSS margin</h3>
+
+                <p>As margens são usadas para criar espaço ao redor dos elementos, fora de quaisquer bordas definidas. Com CSS, temos controle total sobre as margens. Existem propriedades para definir a margem para cada lado de um elemento (direita, inferior e esquerda):</p>
+
+                <ul type = "circle">
+                    <li>
+                        margin-top
+                    </li>
+                    <li>
+                        margin-right
+                    </li>
+                    <li>
+                        margin-bottom
+                    </li>
+                        margin-left
+                    </li>
+                </ul>
+
+                <p>Todas as propriedades de margem podem ter os seguintes valores:</p>
+
+                <ul type = "circle">
+                    <li>
+                        auto - o navegador calcula a margem
+                    </li>
+                    <li>
+                        length - especifica uma margem em px, pt, cm, etc...
+                    </li>
+                    <li>
+                        % - especifica uma margem em da largura do elemento que o contém
+                    </li>
+                        Inherit - especifica que a margem deve ser herdada do elemento pai
+                    </li>
+                </ul>
+
+                <p><strong>CSS margin (forma abreviada)</strong></p>
+
+                <p>Para encurtar o código, é possível especificar todas as propriedades de margem em uma propriedade. A propriedade margin é uma propriedade abreviada para as seguintes propriedades de margem individuais: 
+
+                <ul type = "circle">
+                    <li>
+                        margin-top
+                    </li>
+                    <li>
+                        margin-right
+                    </li>
+                    <li>
+                        margin-bottom
+                    </li>
+                        margin-left
+                    </li>
+                </ul>
+
+                <p>Se a propriedade margin tiver quatro valores "margin: 25px 50px 75px 100px"</p>
+
+                <ul type = "circle">
+                    <li>
+                        margin-top é 25px
+                    </li>
+                    <li>
+                        margin-right é 50px
+                    </li>
+                    <li>
+                        margin-bottom 75px
+                    </li>
+                    <li>
+                        margin-left 100px
+                    </li>
+                </ul>
+
+                <p>Se a propriedade margin tiver três valores "margin: 25px 50px 75px"</p>
+
+                <ul type = "circle">
+                    <li>
+                        margin-top é 25px
+                    </li>
+                    <li>
+                        margin-right e margin-left são 50px
+                    </li>
+                    <li>
+                        margin-bottom 75px
+                    </li>
+                </ul>
+
+                <p>Se a propriedade margin tiver dois valores "margin: 25px 50px"</p>
+
+                <ul type = "circle">
+                    <li>
+                        margin-top e margin-bottom são 25px
+                    </li>
+                    <li>
+                        margin-right e margin-left são 50px
+                    </li>
+                </ul>
+
+                <p>Se a propriedade margin tiver um valor "margin: 25px"</p>
+
+                <ul type = "circle">
+                    <li>
+                        Todas as margens: margin-top, margin-bottom, margin-right e margin-left são 25px
+                    </li>
+                </ul>
+
+                <p><strong>O valor auto</strong></p>
+
+                <p>
+                    Podemos definir a propriedade margin como auto para centralizar horizontalmente 
+                    o elemento em seu contêiner. O elemento então ocupará a largura especificada 
+                    e o espaço restante será dividido igualmente entre as margens 
+                    esquerda e direita.
+                </p>
+
+                <div class="divExemplos">
+
+                    div { <br>
+                    ..width: 300px;<br>
+                    ..margin: auto;<br>
+                    ..border: 1px solid red;<br>
+                    }
+                
+                </div>
+
+                <p><strong>O valor inherit</strong></p>
+
+                <p> Este exemplo permite que a margem esquerda do elemento &lt;p class="ex1"&gt; 
+                    seja herdada do elemento pai (&lt;div&gt;)</p>
+
+                <div class="divExemplos">
+
+                    div {<br>
+                    ..border: 1px solid red;<br>
+                    ..margin-left: 100px;<br>
+                    }<br><br>
+                
+                    p.ex1 {<br>
+                    ..margin-left: inherit;<br>
+                    }
+                
+                </div>
+
+                <!-- --------------Redução da margem (collapse)------------------ -->
+                <h3>Redução da margem (collapse)</h3>
+
+                <p>As margens superior e inferior dos elementos às vezes são reduzidas em uma única 
+                    margem que é igual à maior das duas margens Isso não acontece nas margens 
+                    esquerda e direita! Apenas as margens superior e inferior! 
+                </p>
+
+                <div class="divExemplos">
+
+                    h1 {<br>
+                    ..margin: 0 0 50px 0; <br>   
+                    }<br><br>
+                
+                    h2 {<br>
+                    ..margin: 20px 0 0 0;   <br> 
+                    }
+                
+                </div>
+
+                <p>No exemplo acima, o elemento &lt;h1&gt; tem uma margem inferior de 50px e o elemento &lt;h2&gt; tem uma margem superior definida para 20px. O bom senso pode sugerir que a margem vertical entre &lt;h1&gt; e &lt;h2&gt; seria um total de 70px (50px + 20px). Mas, devido ao colapso (collapse) da margem, a margem real acaba sendo 50px</p>
+
+                <!-- --------------CSS Padding------------------ -->
+                <h3>CSS Padding</h3>
+
+                <p>O preenchimento padding é usado para criar espaço ao redor do conteúdo de um elemento, dentro de quaisquer bordas definidas. Existem propriedades para definir o preenchimento para cada lado de um elemento (direito, inferior e esquerdo)</p>
+
+                <ul type = "circle">
+                    <li>
+                        padding-top
+                    </li>
+                    <li>
+                        padding-right
+                    </li>
+                    <li>
+                        padding-bottom
+                    </li>
+                    <li>
+                        padding-left
+                    </li>
+                </ul>
+
+                <p>Todas as propriedades padding podem ter os seguintes valores</p>
+                
+                <ul type = "circle">
+                    <li>
+                        length: especifica uma margem em px, pt, cm, etc...
+                    </li>
+                    <li>
+                        %: especifica uma margem em % da largura do elemento que o contém
+                    </li>
+                    <li>
+                        Inherit: especifica que a margem deve ser herdada do elemento pai
+                    </li>
+                </ul>
+
+                <p><strong>CSS Padding (forma abreviada)</strong></p>
+
+                <p>A propriedade padding é uma propriedade abreviada para as seguintes propriedades individuais de preenchimento</p>
+
+                <ul type = "circle">
+                    <li>
+                        padding-top
+                    </li>
+                    <li>
+                        padding-right
+                    </li>
+                    <li>
+                        padding-bottom
+                    </li>
+                    <li>
+                        padding-left
+                    </li>
+                </ul>
+
+                Se a propriedade padding tiver quatro valores "padding: 25px 50px 75px 100px"
+
+                <ul type = "circle">
+                    <li>
+                        Preenchimento superior é: 25px
+                    </li>
+                    <li>
+                        Preenchimento direita é: 50px
+                    </li>
+                    <li>
+                        Preenchimento inferior é: 75px
+                    </li>
+                    <li>
+                        Preenchimento esquerda é: 100px
+                    </li>
+                </ul>
+
+                Se a propriedade padding tiver três valores "padding: 25px 50px 75px"
+
+                <ul type = "circle">
+                    <li>
+                        Preenchimento superior é 25px
+                    </li>
+                    <li>
+                        Preenchimento direita e esquerda são 50px
+                    </li>
+                    <li>
+                        Preenchimento inferior é 75px
+                    </li>
+                </ul>
+
+                <p>Se a propriedade padding tiver dois valores "padding: 25px 50px"</p>
+
+                <ul type = "circle">
+                    <li>
+                        Preenchimento superior e inferior são 25px
+                    </li>
+                    <li>
+                        Preenchimento direita e esquerda são 50px
+                    </li>
+                </ul>
+
+                
+                <p>Se a propriedade padding tiver um valor "padding 25px"</p>
+
+                <ul type = "circle">
+                    <li>
+                        Todos os preenchimentos serão 25px
+                    </li>
+                </ul>
+
+            <br><br>
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

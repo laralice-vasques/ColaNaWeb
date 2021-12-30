@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>CSS Position</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+
+                <!-- --------------------------------- Propriedade position ------------------------------------ -->
+
+                <h2>CSS Position</h2>
+                <h3>CSS Position</h3>
+
+                <p>A propriedade position especifica o tipo de método de posicionamento 
+                    usado para um elemento. Existem cinco valores de posição diferentes:
+                </p>
+
+                <ul type = "circle">
+                    <li>
+                        static (estático)
+                    </li>
+                    <li>
+                        relative (relativo)
+                    </li>
+                    <li>
+                        fixed (fixo)
+                    </li>
+                    <li>
+                        absolute (absoluto)
+                    </li>
+                    <li>
+                        Sticky (aderente)
+                    </li>	  
+                </ul>
+
+                <p>Os elementos são posicionados usando as propriedades top, bottom, left e right. No entanto, essas 
+                    propriedades não funcionarão a menos que a propriedade position seja configurada primeiro. Eles também
+                    funcionam de forma diferente dependendo do valor da posição.
+                </p>
+
+                <p>Position é o comportamento do elemento em relação a posição/posicionamento. 
+                    Como ele vai se comportar: de forma estática, relativa, fixa, absoluta ou aderente.
+                    Top, bottom, left e right - se comportarão diferente de acordo com o valor da 
+                    propriedade position.
+                </p>
+
+
+                <!-- ---------------------------------- Position: static ------------------------------------ -->
+                
+                <p><strong>Propriedade - position: static </strong></p>
+
+                <p>
+                    Os elementos HTML são posicionados estáticos por padrão. Os elementos posicionados estáticos 
+                    não são afetados pelas propriedades superior, inferior, esquerda e direita. Um elemento com 
+                    postion static não está posicionado de forma especial, está sempre posicionado de acordo com 
+                    o fluxo normal da página.
+                </p>
+
+                <div class="divExemplos">
+
+                    .posicaoEstatica{ <br>
+                    ..position: static;<br>
+                    ..border: 3px solid #73AD21;<br>
+                    }<br>
+                
+                </div>
+
+                <br>
+
+                <div class="posicaoEstatica">Esse elemento tem posição estática.</div>
+
+                <!-- ---------------------------------- Position: relative ----------------------------- -->
+                <p><strong>Propriedade: - position: relative</strong></p>
+
+                <p>
+                    Um elemento com position relative está posicionado em relação à sua posição 
+                    normal. Definir as propriedades top right bottom e left de um elemento 
+                    relativamente posicionado fará com que ele seja ajustado para longe de 
+                    sua posição normal. Outro conteúdo não será ajustado para caber em 
+                    qualquer lacuna deixada pelo elemento.
+                </p>
+
+                <div class="divExemplos">
+
+                    .posicaoRelativa{ <br>
+                    ..position: static;<br>
+                    ..left: 30px;<br>
+                    ..border: 3px solid #73AD21;<br>
+                    }<br>
+                
+                </div>
+
+                <br>
+
+                <div class="posicaoRelativa">Esse elemento tem posição relativa.</div>
+
+                <!-- -------------------------------- Position: fixed--------------------------------- -->
+                <p><strong>Propriedade: - position: fixed</strong></p>
+
+                <p>Um elemento com position fixed está posicionado em relação à janela de visualização, 
+                    o que significa que sempre permanece no mesmo lugar, mesmo se a página for rolada. 
+                    As propriedades top right bottom e left serão usadas para posicionar o elemento. Um 
+                    elemento fixo não deixa uma lacuna na página onde normalmente estaria localizado.
+                </p>
+
+                <div class="divExemplos">
+
+                    .posicaoFixada{ <br>
+                    ..position: fixed;<br>
+                    ..bottom: 150px;<br>
+                    ..right: 0;<br>
+                    ..width: 300px;<br>
+                    ..border: 3px solid #73AD21;<br>
+                    }<br>
+
+                    <div class="divFilhaExemplos">
+                        
+                        <p style="text-align: center;">O elemento vai ficar grudado a direita da tela, aceite.</p>
+
+                        <div class="posicaoFixa">Esse elemento tem posição fixa.</div> 
+
+                    </div>
+                
+                </div>
+
+                <!-- -------------------------------- Position: absolute------------------------------------ -->
+                <p><strong>Propriedade - position: absolute</strong></p>
+
+                <p>Um elemento com position absolute é posicionado em relação ao ancestral posicionado 
+                    mais próximo (em vez de posicionado em relação à janela de visualização, como fixed. 
+                    Contudo se um elemento posicionado de forma absoluta não tiver ancestrais posicionados, 
+                    ele usará o corpo do documento e se moverá junto com a rolagem da página.
+                    <br><br>Nota: Um elemento absoluto é aquele cuja posição é qualquer uma, exceto 
+                    estática.
+                </p>
+
+                <div class="divExemplos">
+
+                    .posicaoRelativaPaiAbsoluto{ <br>
+                    ..position: relative;<br>
+                    ..width: 400px;<br>
+                    ..height: 200px;<br>
+                    ..border: 3px solid #73AD21;<br>
+                    }<br>
+                    .posicaoAbsoluta {<br>
+                    ..position: absolute;<br>
+                    ..top: 80px;<br>
+                    ..right: 0;<br>
+                    ..width: 200px;<br>
+                    ..height: 100px;<br>
+                    ..border: 3px solid #73AD21;<br>
+                    }<br>
+                
+                </div>
+
+                <br>
+
+                <div class="posicaoRelativaPaiAbsoluto" style="margin: auto;">
+                    Esse elemento tem posição relativa - elemento pai do absoluto (nesse caso).
+
+                    <div class="posicaoAbsoluta">
+                        Esse elemento tem posição absoluta.
+                    </div>
+                </div>
+
+                <!-- -------------------------------- Position: sticky------------------------------------ -->
+                <p><strong>Propriedade - position: sticky</strong></p>
+
+                <p>
+                    Um elemento com position sticky é posicionado com base na posição de rolagem 
+                    do usuário. Um elemento "aderente" alterna entre "relativo" e "fixo" dependendo 
+                    da posição de rolagem. Ele é posicionado em relação até que uma determinada 
+                    posição de deslocamento seja encontrada na viewport - então, ele "se fixa" no 
+                    lugar (como a posição fixa). Neste exemplo, o elemento aderente adere ao topo 
+                    da página top 0 quando atingimos a posição de rolagem. 
+                </p>
+                
+                <div class="divExemplos">
+
+                    .posicaoAderente { <br>
+                    ..position: sticky;<br>
+                    ..top: 0;<br>
+                    ..background-color: green;<br>
+                    ..border: 2px solid #4CAF50;<br>
+                    }<br>
+
+                </div>
+
+                <br>
+
+                <div class="posicaoAderente">Esse elemento tem posição aderente (sticky).</div>
+
+                <!-- -------------------------------- Elementos sobrepostos ----------------------------- -->
+                <h3>Elementos sobrepostos</h3>
+                
+                <p>Quando os elementos são posicionados, eles podem se sobrepor a outros elementos. A propriedade 
+                z-index especifica a ordem da pilha de um elemento (qual elemento deve ser colocado na frente 
+                ou atrás dos outros). Um elemento pode ter uma ordem de empilhamento positiva ou negativa.
+                </p>
+
+                <ul type = "circle">
+                    <li>
+                        bottom layer (mais distante do observador)
+                    </li>
+                    <li>
+                    ...
+                    </li>
+                    <li>
+                        Layer -3
+                    </li>
+                    <li>
+                        Layer -2
+                    </li>
+                    <li>
+                        Layer -1
+                    </li>
+                    <li>
+                        Layer 0 (default rendering layer)
+                    </li>
+                    <li>
+                        Layer 1
+                    </li>
+                    <li>
+                        Layer 2
+                    </li>
+                    <li>
+                        Layer 3
+                    </li>
+                    <li>
+                        ...
+                    </li>
+                    <li>
+                        top layer (mais próximo do observador)
+                    </li>
+                </ul>
+
+                <p>Nota: Se dois elementos posicionados se sobrepõem sem um índice z especificado, o elemento 
+                    posicionado por último no código HTML será mostrado na parte superior.
+                </p>
+
+                <p>PORÉM: esse elemento vai depender do contexto que ele estiver inserido.</p>
+
+                <p><strong>Código CSS (minha folha de estilos style.css)</strong></p>
+
+                <div class="divExemplos">
+
+                    .containerElemSobrepostos {<br>
+                        background-color: white;<br>
+                        width: 100%;<br>
+                        height: 440px;<br>
+                        position: relative;<br>
+                        align-content: center;<br>
+                        border: 1px dashed black;<br>
+                    }<br>
+                    <br>
+                    .elementoSobreposto {<br>
+                        padding: 10px;<br>
+                        opacity: 0.7;<br>
+                        text-align: center;<br>
+                    }<br>
+                    <br>
+                    #abs1 {<br>
+                        z-index: 5;<br>
+                        position: absolute;<br>
+                        width: 150px;<br>
+                        height: 420px;<br>
+                        top: 10px;<br>
+                        left: 10px;<br>
+                        border: 1px dashed #900;<br>
+                        background-color: #fdd;<br>
+                    }<br>
+                    <br>
+                    #abs2 {<br>
+                        z-index: 1;<br>
+                        position: absolute;<br>
+                        width: 150px;<br>
+                        height: 420px;<br>
+                        top: 10px;<br>
+                        right: 10px;<br>
+                        border: 1px dashed #900;<br>
+                        background-color: #fdd;<br>
+                    }<br>
+                    <br>
+                    #rel1 {<br>
+                        z-index: 3;<br>
+                        height: 130px;<br>
+                        position: relative;<br>
+                        top: 30px;<br>
+                        border: 1px dashed #696;<br>
+                        background-color: #cfc;<br>
+                        margin: 0px 50px 0px 50px;<br>
+                    }<br>
+                    <br>
+                    #rel2 {<br>
+                        z-index: 2;<br>
+                        height: 130px;<br>
+                        position: relative;<br>
+                        top: 15px;<br>
+                        left: 20px;<br>
+                        border: 1px dashed #696;<br>
+                        background-color: #cfc;<br>
+                        margin: 0px 50px 0px 50px;<br>
+                    }<br>
+                    <br>
+                    #sta1 {<br>
+                        z-index: 8;<br>
+                        height: 110px;<br>
+                        border: 1px dashed #996;<br>
+                        background-color: #ffc;<br>
+                        margin: 0px 50px 0px 50px;<br>
+                    }<br>
+                
+                </div>
+
+                <p><strong>Código HTML (body do meu documento html)</strong></p>
+
+                <div class="divExemplos">
+                    &lt;div class="containerElemSobrepostos"&gt;<br>
+
+                    ..&lt;div id="abs1" class="elementoSobreposto"&gt;<br>
+                    ....&lt;p&gt;DIV #1&lt;br&gt;<br>
+                    ....position: absolute;&lt;br&gt;<br>
+                    ....z-index: 5;&lt;/p&gt;<br>
+                    ..&lt;/div&gt;<br><br>
+                        <br>
+                    ..&lt;div id="rel1" class="elementoSobreposto"&gt;<br>
+                    ....&lt;p&gt;DIV #2&lt;br&gt;<br>
+                    ....position: relative;&lt;br&gt;<br>
+                    ....z-index: 3;&lt;/p&gt;<br>
+                    ..&lt;/div&gt;<br><br>
+                        <br>
+                    ..&lt;div id="rel2" class="elementoSobreposto"&gt;<br>
+                    ....&lt;p&gt;DIV #3&lt;br&gt;<br>
+                    ....position: relative;&lt;br&gt;<br>
+                    ....z-index: 2;&lt;/p&gt;<br>
+                    ..&lt;/div&gt;<br><br>
+                        <br>
+                    ..&lt;div id="abs2" class="elementoSobreposto"&gt;<br>
+                    ....&lt;p&gt;DIV #4&lt;br&gt;<br>
+                    ....position: absolute;&lt;br&gt;<br>
+                    ....z-index: 1;&lt;/p&gt;<br>
+                    ..&lt;/div&gt;<br><br>
+                        <br>
+                    ..&lt;div id="sta1" class="elementoSobreposto"&gt;<br>
+                    ....&lt;p&gt;DIV #5&lt;br&gt;<br>
+                    ....no positioning&lt;br&gt;<br>
+                    ....z-index: 8;&lt;/p&gt;<br>
+                    ..&lt;/div&gt;<br>
+                    &lt;/div&gt;
+                </div>
+
+                <p>Esse código acima são os elementos sobrepostos abaixo:</p>
+
+                <br>
+
+                <div class="containerElemSobrepostos">
+
+                    <div id="abs1" class="elementoSobreposto">
+                        <p>DIV #1<br>
+                        position: absolute;<br>
+                        z-index: 5;</p>
+                    </div>
+                    
+                    <div id="rel1" class="elementoSobreposto">
+                        <p>DIV #2<br>
+                        position: relative;<br>
+                        z-index: 3;</p>
+                    </div>
+                    
+                    <div id="rel2" class="elementoSobreposto">
+                        <p>DIV #3<br>
+                        position: relative;<br>
+                        z-index: 2;</p>
+                    </div>
+                    
+                    <div id="abs2" class="elementoSobreposto">
+                        <p>DIV #4<br>
+                        position: absolute;<br>
+                        z-index: 1;</p>
+                    </div>
+                    
+                    <div id="sta1" class="elementoSobreposto">
+                        <p>DIV #5<br>
+                        no positioning<br>
+                        z-index: 8;</p>
+                    </div>
+                </div>
+                
+                <br>
+
+                <p>Um elemento com uma ordem de pilha maior estará sempre na frente de um elemento com uma ordem
+                    de pilha menor. Note que o elemento com z-index 8 está atrás dos outros elementos, 
+                    mas é porque ele não está posicionado. Se definirmos a posição dele, ele irá sobrepor todos os outros.</p>
+
+            
+                <br><br>
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

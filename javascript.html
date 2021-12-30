@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>JavaScript</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+                <h2 style="text-align:center">JavaScript</h2> <br>
+
+                <p>JavaScript é uma linguagem simples interpretada linha por linha baseada em objetos. Com Javascript 
+                    podemos:
+                </p>
+
+                <ul type = "circle">
+                    <li>
+                        Realizar operações matemáticas e computação
+                    </li>
+                    <li>
+                        Gerar documentos com aparência definida na hora da visualização, com base em informações do
+                        cliente como versões do browser, cookies e outras propriedades
+                    </li>
+                    <li>
+                        Abrir janelas do browser, trocar informações entre janelas, manipular com propriedades do
+                        browser como o histórico, barra de estado, plug ins e applets
+                    </li>
+                    <li>
+                        Interagir com o conteúdo do documento, alterando propriedades da página, dos elementos HTML
+                        e tratando toda a página como uma estrutura de objetos (DOM)
+                    </li>
+                    <li>
+                        Interagir com o usuário através do tratamento de eventos
+                    </li>
+                </ul>
+
+                <p>Há pelo menos três maneiras de incluir JavaScript em uma página Web:</p>
+
+                <p>Dentro de blocos HTML: &lt;script&gt;......&lt;/script&gt; em várias partes da página para:</p>
+
+                <ul type = "circle">
+                    <li>
+                    definir funções
+                    </li>
+                    <li>
+                    gerar HTML
+                    </li>
+                    <li>
+                        alterar o procedimento normal de interpretação do HTML da página pelo browser.
+                    </li>
+                </ul>
+
+                <p>Em um arquivo externo: importado pela página para:</p>
+                
+                <ul type = "circle">
+                    <li>
+                        definir funções que serão usadas por várias páginas de um site
+                    </li>
+                </ul>
+
+                <p>Dentro de descritores HTML: sensíveis a eventos para:</p>
+            
+                <ul type = "circle">
+                    <li>
+                        tratar eventos do usuário em links, botões e componentes de entrada de dados, durante a
+                        exibição da página
+                    </li>
+                </ul>
+
+                <p>Obs: As três formas podem ser usadas em uma mesma página.</p>
+
+                <!-- ------------------------ A tag <script>------------------------- -->
+                <h3>A tag &lt;script&gt;</h3>
+
+                <p>Em HTML, o código JavaScript é inserido entre tags &lt;script&gt; &lt;/script&gt;</p>
+
+                &lt;script&gt;<br>
+                document.getElementById("idProcurado").innerHTML = "Meu primeiro JavaScript"<br>
+                &lt;/script&gt;
+
+                <!-- ------------------------JavaScript na <head> ou <body> ------------------------- -->
+                <h3>JavaScript na &lt;head&gt; ou &lt;body&gt;</h3>
+
+                <p>Podemos colocar qualquer número de scripts em um documento HTML Os scripts podem ser
+                    colocados no &lt;body&gt; ou na seção &lt;head&gt; de uma página HTML, ou em ambos.</p>
+
+                <p>Colocar scripts na parte inferior do elemento  &lt;body&gt; melhora a velocidade de 
+                    exibição, porque a interpretação scripts retarda o display</p>
+
+                <!-- -------------------------JavaScript externo------------------------ -->
+                <h3>JavaScript externo</h3>
+
+                <p>Scripts também podem ser colocados em arquivos externos. Scripts externos são práticos quando o
+                    mesmo código é utilizado em diferentes páginas da web. Arquivos JavaScript tem a extensão 
+                    de arquivo ".js". Para usar um script externo, colocamos o nome do
+                    arquivo de script no atributo src de uma tag &lt;script&gt;</p>
+
+                    &lt;script src="script.js"&gt; &lt;/script&gt;
+
+                <p>Podemos colocar uma referência de script externo nas seções &lt;head&gt; ou &lt;body&gt;. 
+                    O script irá se comportar como se ele estivesse localizado exatamente onde a tag &lt;/script&gt; 
+                    está localizada</p>
+
+                <p>O JavaScript pode " dados de diferentes maneiras</p>
+
+                <ul type = "circle">
+                    <li>
+                        Escrevendo em um elemento HTML, usando innerHTML
+                    </li>
+                    <li>
+                        Escrevendo na saída HTML usando document.write()
+                    </li>
+                    <li>
+                        Escrevendo em uma caixa de alerta, usando window.alert()
+                    </li>
+                    <li>
+                        Escrevendo no console do navegador, usando console.log()
+                    </li>
+                </ul>
+
+                <!-- ----------------------innerHTML--------------------------- -->
+                <h3>Usando innerHTML</h3>
+                <p>Para acessar um elemento HTML, o JavaScript pode usar o método: document.getElementById().
+                    O atributo id define o elemento HTML. A propriedade innerHTML define o conteúdo HTML. Alterar a
+                    propriedade innerHTML de um elemento é uma maneira comum de exibir dados em HTML.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;JavaScript externo&lt;/p&gt; <br>
+                    &lt;p id="paragrafoAlterar"&gt; Um parágrafo&lt;/p&gt;<br>
+                    <br>
+                    &lt;button type="button" onclick="alteraParagrafo()"&gt; Testar! &lt;/button&gt;<br>
+                    <br>
+                    &lt;p&gt;A function alteraParagrafo() está armazenada na pasta javascript em um arquivo externo chamado:
+                        scriptExemplo1.js&lt;/p&gt;<br>
+                        <br>
+                    &lt;script src="javascript/scriptExemplo1.js"&gt;&lt;/script&gt;<br>
+                    <br>
+
+                    <div class="divFilhaExemplos" style="text-align: center;">
+                        <p>JavaScript externo</p>
+                        <p id="paragrafoAlterar"> Um parágrafo</p>
+
+                        <button class="button" type="button" onclick="alteraParagrafo()"> Testar! </button>
+
+                        <p>A function alteraParagrafo() está armazenada na pasta javascript em um arquivo externo chamado:
+                            scriptExemplo1.js</p>
+
+                        <script src="javascript/scriptExemplo1.js"></script>
+                    </div>
+                
+                </div>
+
+                <!-- ------------------------document.write()------------------------- -->
+                <h3>Usando document.write()</h3>
+
+                <p>Para fins de teste, é conveniente usar document.write():</p>
+
+                <div class="divExemplos">
+
+                    ...&lt;p&gt;Clicar nesse botão irá substituir a página inteira pela soma de 5 + 1.&lt;/p&gt; <br>
+                    
+                    ...&lt;script&gt;  <br>
+                    ......documento.write(5 + 1); <br>
+                    ...&lt;/script&gt; <br>
+                    
+                    ...&lt;button type="button" onclick="document.write(5 + 1)">Apagar tudo!&lt;/button&gt;<br>
+                    <br>
+
+                    <div class="divFilhaExemplos" style="text-align: center;">
+                        <p>Clicar nesse botão irá substituir a página inteira pela soma de 5 + 1.</p>
+
+                        <script> 
+                            documento.write(5 + 1);
+                        </script>
+    
+                        <button class="button" type="button" onclick="document.write(5 + 1)">Apagar tudo!</button>
+                    </div>
+                
+                </div>
+
+                <p>O uso de document.write() após o carregamento de um documento HTML excluirá todo o HTML
+                    existente.</p>
+
+                <!-- ------------------------document.window.alert()------------------------- -->
+                <h3>window.alert()</h3>
+
+                <p>Podemos usar uma caixa de alerta para exibir dados. Essa caixinha só some quando você clica em ok
+                    e ela aparece antes do carregamento da página. Pode ser usada para tratamento de erros, validar
+                formuários...</p>
+
+                <div class="divExemplos">
+                    &lt;script&gt; <br>
+                    ....documento.alert(5 + 1); <br>
+                    &lt;/script&gt;
+                </div>
+
+                <h3>console.log()</h3>
+
+                <p>Para fins de depuração, podemos chamar o método console log no navegador para exibir dados.
+                    Podemos usar o console.log() para controlar o valor de uma variável ou realizar uma operação que
+                    seja necessário no momento da programação.</p>
+
+                <div class="divExemplos">
+                    &lt;script&gt; <br>
+                    ....console.log(5 + 1); <br>
+                    &lt;/script&gt;
+                </div>
+
+                <p>O console.log não aparece para o usuário final, é necessário pressionar F12 no teclado 
+                    para ativar o depurador, selecionar console  no menu e recarregar a página.
+                </p>
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

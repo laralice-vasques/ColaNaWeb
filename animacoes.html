@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Animações</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+
+                <h2 style="text-align:center">Animações</h2> <br>
+
+                <p>Uma animação permite que um elemento mude gradualmente de um estilo para outro. Para usar animação, 
+                    devemos primeiro especificar alguns quadros-chave (@keyframes). Os keyframes contêm os estilos 
+                    que o elemento terá em determinados momentos.</p>
+            
+                    <ul type = "circle">
+                        <li>
+                            @keyframes
+                        </li>
+                        <li>
+                            animation-name
+                        </li>
+                        <li>
+                            animation-duration
+                        </li>
+                        <li>
+                            animation-delay
+                        </li>
+                        <li>
+                            animation-iteration-count
+                        </li>
+                        <li>
+                            animation-direction
+                        </li>
+                        <li>
+                            animation-timing-function
+                        </li>
+                        <li>
+                            animation
+                        </li>
+                    </ul>
+            
+                    <h3>A regra keyframe</h3>
+
+                    <p>Quando especificamos estilos CSS dentro da regra @keyframes, a animação mudará gradualmente
+                        do estilo atua l para o novo estilo em determinados momentos. Para fazer uma animação 
+                        funcionar, devemos vincular a animação a um elemento.</p>
+
+                    <p>O exemplo a seguir vincula a animação exemplo ao elemento div. A animação durará 2 segundos e
+                        mudará gradualmente a cor de fundo do elemento div de cinza para amarelo.</p>
+                
+                <div class="divExemplos">
+                    <div style="text-align: center;">
+                        <strong>No meu arquivo de estilos (style.css nesse caso) 
+                        <br>OU<br> no HEAD do meu arquivo do navegador usando a tag &lt;style&gt;</strong>
+                    </div>
+
+                    <br>
+                    
+                    @keyframes <span style="color: royalblue;">exemplo1</span> {<br>
+                    ..from{ <br>
+                    ....background-color: silver;<br>
+                    ..}<br>
+                    ..to{<br>
+                    ....background-color: yellow;<br>
+                    ..}<br>
+                    }<br>
+
+                    <span style="color: seagreen;">.animacao1</span> { <br>
+                        width: 150px;<br>
+                        height: 150px;<br>
+                        background-color: silver;<br>
+                        animation-name: <span style="color: royalblue;">exemplo1</span>;<br>
+                        animation-duration: 10s;<br>
+                        animation-delay: 2s;<br>
+                        animation-iteration-count: infinite;<br>
+                    }
+
+                    <br><br>
+                    
+                    <div style="text-align: center;"><strong>
+                        No BODY do meu arquivo do navegador</strong>
+                    </div>
+
+                    <br>
+
+                    &lt;div class="<span style="color: seagreen;">animacao1</span>"&gt;&lt;/div&gt;
+
+                    <p style="text-align: center;">Esse código acima é essa animação: </p>
+
+                    <div class="divFilhaExemplos">
+                        <div class="animacao1" style="margin: auto;"></div> 
+                    </div> 
+                </div>
+
+                <p>No exemplo anterior, especificamos quando o estilo será alterado usando as palavras chave 
+                    "from" e "to"- que representa 0%(início) e 100%(completo).</p>
+
+                <p>Obs: a propriedade animation-duration define quanto tempo uma animação deve levar para ser
+                    concluída. Se esta propriedade não for especificada, nenhuma animação ocorrerá.</p>
+
+                <p>Também é possível usar por cento. Usando porcentagem, você pode adicionar quantas mudanças de
+                    estilo desejar.</p>
+
+                <div class="divExemplos">
+                    <div style="text-align: center;">
+                        <strong>No meu arquivo de estilos (style.css nesse caso) 
+                        <br>OU<br> no HEAD do meu arquivo do navegador usando a tag &lt;style&gt;</strong>
+                    </div>
+
+                    <br>
+
+                    @keyframes <span style="color: royalblue;">exemplo2</span> { <br>
+                    ..0% {background-color:  silver;}<br>
+                    ..25% {background-color:  royalblue;}<br>
+                    ..50% {background-color:  greenyellow;}<br>
+                    ..75% {background-color:  orange;}<br>
+                    ..100% {background-color:  rebeccapurple;}<br>
+                    }<br>
+
+                    <br>
+                
+                    <span style="color: seagreen;">.animacao2</span> {
+                        width: 150px;
+                        height: 150px;
+                        background-color: silver;
+                        animation-name: <span style="color: royalblue;">exemplo2</span>;
+                        animation-duration: 5s;
+                        animation-delay: 2s;
+                        animation-iteration-count: infinite;
+                    }</pre>
+
+                    <br><br>
+                    
+                    <div style="text-align: center;"><strong>No BODY do meu arquivo do navegador</strong></div>
+                    
+                    <br>
+                    
+                    &lt;div class="<span style="color: seagreen;">animacao2</span>"&gt;&lt;/div&gt;
+
+                    <p style="text-align: center;">E esse código resulta nessa animação:</p>
+
+                    <div class="divFilhaExemplos">
+                        <div class="animacao2" style="margin: auto;"></div>
+                    </div>
+                </div>
+
+                <p>A propriedade animation-delay especifica um atraso para o início de uma animação. 
+                    A animação 
+                    anterior tem um delay de 2 segundos.</p>
+
+                <p>No exemplo a seguir, também mudamos a margem esquerda e superior em cada momento da 
+                    animação.</p>
+
+                <div class="divExemplos">
+                    <div style="text-align: center;">
+                        <strong>No meu arquivo de estilos (style.css nesse caso) 
+                        <br>OU<br> no HEAD do meu arquivo do navegador usando a tag &lt;style&gt;</strong>
+                    </div>
+    
+                    <br>
+                    
+                    @keyframes <span style="color: royalblue;">exemplo3</span> { <br>
+                    ..0% {background-color: red; left: 0px; top: 0px;} <br>
+                    ..25% {background-color: yellow; left: 50%; top: 0px;} <br>
+                    ..50% {background-color: blue; left: 50%; top: 50%;} <br>
+                    ..75% {background-color: green; left: 0px; top: 50%;} <br>
+                    ..100% {background-color: red; left: 0px; top: 0px;} <br>
+                    } <br>
+    
+                    <span style="color: seagreen;">.animacao3</span> {<br>
+                    ..width: 150px;<br>
+                    ..height: 150px;<br>
+                    ..background-color: silver;<br>
+                    ..animation-name: exemplo3;<br>
+                    ..animation-duration: 5s;<br>
+                    ..animation-delay: 2s;<br>
+                    ..animation-iteration-count: infinite;<br>
+                    }<br>
+    
+                    <br><br>
+    
+                    <div style="text-align: center;">
+                        <strong>No BODY do meu arquivo do navegador</strong>
+                    </div>
+    
+                    <br>
+                    
+                    &lt;div class="<span style="color: seagreen;">animacao3</span>"&gt;&lt;/div&gt;
+                        
+                    <br><br>
+
+                    <p style="text-align: center;">E a animação fica assim: </p>
+                    
+                    <div style="width: 65%; height: 400px; border: 1px solid black; padding: 20px; margin: auto;">
+                        <div class="animacao3"></div>
+                    </div>
+                
+                </div>
+
+                <p>A propriedade animation-iteration-count especifica o número de vezes que uma animação deve ser
+                executada. Os exemplos acima usam o valor "infinito" na propriedade animation-iteration-count 
+                para fazer a animação continuar para sempre.</p>
+
+                <p>A propriedade animation-direction especifica se uma animação deve ser reproduzida para frente, 
+                    para trás ou em ciclos alternados. Essa propriedade pode ter os seguintes valores: 
+                </p>
+
+                <ul type = "circle">
+                    <li>
+                        normal - A animação é reproduzida normalmente (para frente). Este é o padrão.
+                    </li>
+                    <li>
+                        reverse - A animação é reproduzida na direção reversa (para trás).
+                    </li>
+                    <li>
+                        alternate - A animação é reproduzida primeiro para a frente, depois para trás.
+                    </li>
+                    <li>
+                        alternate-reverse - A animação é reproduzida primeiro para trás e depois para a frente.
+                    </li>
+                </ul>
+
+                <p>A propriedade animation-timing-function especifica a curva de velocidade da animação. 
+                    Ela pode ter os seguintes valores: </p>
+
+                <ul type = "circle">
+                    <li>
+                        ease - Especifica uma animação com um início lento, depois rápido e, a seguir, um final lento 
+                        (este é o padrão).
+                    </li>
+                    <li>
+                        linear - Especifica uma animação com a mesma velocidade do início ao fim.
+                    </li>
+                    <li>
+                        ease-in - Especifica uma animação com um início lento.
+                    </li>
+                    <li>
+                        ease-out - Especifica uma animação com um final lento.
+                    </li>
+                    <li>
+                        ease-in-out - Especifica uma animação com início e fim lentos.
+                    </li>
+                    <li>
+                        cubic-bezier (n,n,n,n). Permite definir seus próprios valores em uma função cúbica de bezier.
+                    </li>
+                </ul>
+
+                <div class="divExemplos">
+                    <div class="animacao4-div1">linear</div>
+                    <div class="animacao4-div2">ease</div>
+                    <div class="animacao4-div3">ease-in</div>
+                    <div class="animacao4-div4">ease-out</div>
+                    <div class="animacao4-div5">ease-in-out</div>
+                </div>
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

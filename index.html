@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Página Inicial</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa principal-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+		<!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+					<li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+				<h2 style="text-align:center">Página principal</h2>
+				
+				
+				<h3>Introdução a HTML</h3>
+				<div>
+					<p> 
+						HTML (Hyper Text Markup Language) é a linguagem de marcação padrão para páginas da web. HTML consiste em uma série de elementos e atributos. Os elementos HTML informam ao navegador como exibir o conteúdo e identificam partes de conteúdo como "isto é um título", "isto é um parágrafo", "isto é um link", etc.
+					</p>
+				</div>
+
+				<h3>O que é um elemento HTML?</h3>
+
+				<div>
+					<p> 
+						Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final:
+					</p> 
+
+					<table>
+						<tr>
+							<th>Tag inicial</th>
+							<th>Conteúdo do elemento</th>
+							<th>Tag final</th>
+						</tr>
+						<tr>
+							<td>&lt;h1&gt;</td>
+							<td>Primeiro cabeçalho</td>
+							<td>&lt;/h1&gt;</td>
+						</tr>
+						<tr>
+							<td>&lt;p&gt;</td>
+							<td>Primeiro parágrafo</td>
+							<td>&lt;/p&gt;</td>
+						</tr>
+						<tr>
+							<td>&lt;br&gt;</td>
+							<td>none</td>
+							<td>none</td>
+						</tr>
+					</table>
+
+				</div>
+
+				<p><strong>Tag de abertura -</strong> 
+					Consiste no nome do elemento, envolvido entre parênteses angulares de abertura e fechamento. 
+					Isso indica onde o elemento começa, ou inicia a produzir efeito. Neste caso, onde o parágrafo 
+					se inicia.</p>
+
+				<p><strong>Tag de fechamento -</strong> 
+					É o mesmo que a tag de abertura, exceto que este inclui uma barra diagonal 
+					antes do nome do elemento. Indica onde o elemento termina, neste caso, onde fica o 
+					fim do parágrafo. </p>
+
+				<p><strong>O conteúdo -</strong> Este é o conteúdo do elemento, 
+					que neste caso é somente texto.
+
+				<p><strong>O elemento -</strong>  A tag de abertura, mais a tag de fechamento, 
+					mais o conteúdo, é igual ao elemento. </p>
+
+				<p>O objetivo de um navegador da web (Chrome, Edge, Firefox, Safari) é ler documentos HTML 
+					e exibi los corretamente. Um navegador não exibe as tags HTML, mas as usa para determinar 
+					como exibir o documento:</p>
+
+				<div style="text-align:center">
+					<img title="Imagem explicativa - Introdução ao HTML" 
+						src="img/introducaoHTML.jpg"
+						width=100%>
+				</div>
+				<br>
+
+				<div class="divExemplos">
+					<p><strong>Tag:</strong> &lt;b&gt; conteúdo &lt;/b&gt;  </p>
+					<p><strong>Código:</strong> Nunca foi sorte, sempre foi &lt;b&gt;Deus&lt;/b&gt;!</p>
+					<p><strong>Navegador:</strong> Nunca foi sorte, sempre foi <b>Deus</b>!</p>
+				</div>
+				<br>
+				<div class="divExemplos">
+					<p><strong>Tag:</strong> &lt;strong&gt; conteúdo &lt;/strong&gt;</p>
+					<p><strong>Código:</strong> Nunca foi sorte, sempre foi &lt;strong&gt;Deus&lt;/strong&gt;!</p>
+					<p><strong>Navegador:</strong> Nunca foi sorte, sempre foi <strong style="color: black;">Deus</strong>!</p>
+				</div>
+				<br>
+				<div class="divExemplos">
+					<p><strong>Tag:</strong> &lt;i&gt; conteúdo &lt;/i&gt;</p>
+					<p><strong>Código:</strong> Nunca foi sorte, sempre foi &lt;i&gt;Deus!&lt;/i&gt;</p>
+					<p><strong>Navegador:</strong> Nunca foi sorte, sempre foi <i>Deus</i>!</p>
+				</div>
+				<br>
+				<div class="divExemplos">
+					<p><strong>Tag:</strong> &lt;em&gt; conteúdo &lt;/em&gt;</p>
+					<p><strong>Código:</strong> Nunca foi sorte, sempre foi &lt;em&gt;Deus&lt;/em&gt;!</p>
+					<p><strong>Navegador:</strong> Nunca foi sorte, sempre foi <em>Deus</em>!</p>
+				</div>
+				<br>
+				<div class="divExemplos">
+					<p><strong>Tag:</strong> &lt;u&gt; conteúdo &lt;/u&gt;</p>
+					<p><strong>Código:</strong> Nunca foi sorte, sempre foi &lt;u&gt;Deus&lt;/u&gt;!</p>
+					<p><strong>Navegador:</strong> Nunca foi sorte, sempre foi <u>Deus</u>!</p>
+				</div>
+				<br>
+				<div class="divExemplos">
+					<p><strong>Tag:</strong> &lt;strike&gt; conteúdo &lt;/strike&gt;</p>
+					<p><strong>Código:</strong> Nunca foi &lt;strike&gt;sorte&lt;/strike&gt;, sempre foi Deus!</p>
+					<p><strong>Navegador:</strong> Nunca foi <strike>sorte</strike>, sempre foi Deus!</p>
+				</div>
+				<!-- o <b> n é mais utilizado, prefere-se o <strong>
+				o <i> não é mais utilizado, prefere-se o <em> -->
+
+
+				<h3>Anatomia de uma Tag HTML</h3>
+
+				<p>Elementos também podem conter atributos, que se apresentam da seguinte forma:</p>
+
+				<div style="text-align:center">
+					<img title="Imagem explicativa - Anatomia de uma Tag HTML" 
+						src="img/anatomiaTagHTML.jpg"
+						width="90%">
+				</div> <br>	
+
+				
+				<ul type = "circle">
+				<li>
+					Todos os elementos HTML podem ter atributos;
+				</li>
+				<li>
+					Os atributos fornecem informações adicionais sobre os elementos;
+				</li>
+				<li>
+					Os atributos são sempre especificados na tag inicial;
+				</li>
+				<li>
+					Os atributos geralmente vêm em pares nome/valor como nome="valor".
+				</li>
+				</ul>
+
+				<p>Um atributo deve conter</p>
+
+				<ul type = "circle">
+				<li>
+					Um espaço entre ele e o nome do elemento (ou o atributo anterior, caso o elemento já contenha um ou mais atributos);
+				</li>
+				<li>
+					O nome do atributo seguido por um sinal de igual;
+				</li>
+				<li>
+					Um valor de atributo com aspas de abertura e fechamento em volta dele.
+				</li>
+				</ul>
+
+				<!--  ------------------------Explicação do atributo style----------------------- -->
+
+				<h3>Atributo style</h3>
+				<p>
+					Usado para adicionar estilos a um elemento, como: cor do texto, cor de fundo, fonte, tamanho etc... &lt;tagname style="propriedade: valor;"&gt;
+				</p>
+
+				<p>
+					<strong>Propriedade color:</strong>
+				</p>
+
+				<div class="divExemplos">
+					<p>
+						<strong>Código: </strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p style ="color:blue;"&gt; Isto é um parágrafo azul!&lt;/p&gt;
+					</p>
+						
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong >Navegador:</strong> 
+						</p>
+						
+						<p style ="color:blue;"> Isto é um parágrafo azul!
+					</div>
+				</div>
+
+				<!-------------------------- Propriedade background-color------------------------------ -->
+				<p>
+					<strong>Propriedade background-color:</strong>
+				</p>
+
+				<div class="divExemplos">
+					
+					<p>
+						<strong>Código: </strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p style ="background-color:silver;"&gt;Este parágrafo tem fundo cinza&lt;/p&gt;
+					</p>
+						
+						<div class="divExemplos">
+							<p style="text-align: center;">
+								<strong>Navegador:</strong> 
+							</p>
+							 
+							<p style ="background-color:silver;">Este parágrafo tem fundo cinza</p>
+						</div>
+					
+				</div>
+				
+				<!-------------------------- Propriedade font-family------------------------------ -->
+				<p>
+					<strong >Propriedade font-family:</strong>
+				</p>
+
+				<div class="divExemplos">
+					
+					<p>
+						<strong>Código: </strong>
+					</p>
+					
+					<p class="codigo">
+						&lt;p style ="font-family:verdana;"&gt;Parágrafo de fonte verdana&lt;/p&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong> 
+						</p>
+
+						<p style ="font-family:verdana;">Parágrafo de fonte verdana</p>
+					</div>
+
+					<p>
+						<strong>Código: </strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p style ="font-family:courier;"&gt;Parágrafo de fonte courier&lt;/p&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong>						
+						</p>
+
+						<p style ="font-family:courier;">Parágrafo de fonte courier</p>
+					</div>
+
+				</div>
+
+				<!-------------------------- Propriedade font-size------------------------------ -->
+				<p>
+					<strong>Propriedade font-size:</strong>
+				</p>
+				
+				<div class="divExemplos">
+					
+					<p>
+						<strong>Código: </strong> 
+					</p>
+
+					<p class="codigo">
+						&lt;p style ="font-size:80%;"&gt;Parágrafo tamanho 80%&lt;/p&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong> 
+						</p>
+						<p style ="font-size:80%;">Parágrafo tamanho 80%</p>
+					</div>
+
+					<p>
+						<strong>Código: </strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p style ="font-size:130%;"&gt;Parágrafo tamanho 130%&lt;/p&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong>
+						</p>
+						<p style ="font-size:130%;">Parágrafo tamanho 130%</p>
+					</div>
+				</div>
+				
+				<!-------------------------- Propriedade text-align------------------------------ -->
+				<p>
+					<strong>Propriedade text-align:</strong>
+				</p>
+
+				<div class="divExemplos">
+
+					<p>
+						<strong>Código: </strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p style="text-align: left;"&gt;Esquerda&lt;/p&gt;
+						<br>&lt;p style="text-align: center;"&gt;Centro&lt;/p&gt;
+						<br>&lt;p style="text-align: right;"&gt;Direita&lt;/p&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong>
+						</p>
+
+						<p style="text-align: left;">Esquerda</p>
+						<p style="text-align: center;">Centro</p>
+						<p style="text-align: right;">Direita</p>
+					</div>
+						
+				</div>
+
+				<!-------------------------- Explicação do title------------------------------ -->
+				
+				<h3>Atributo title</h3>
+				<p>
+					Define algumas informações extras sobre um elemento. O valor do atributo title será exibido como uma dica (tooltip) quando passarmos o mouse sobre o elemento
+				</p>
+
+				<div class="divExemplos">
+
+					<p>
+						<strong>Código:</strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p title ="Eu sou uma dica!"&gt; Isto é um parágrafo.&lt;/p&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong>
+						</p>
+						<p title ="Eu sou uma dica!"> Isto é um parágrafo.</p>
+					</div>
+				</div>
+
+
+				<!-- -------------------------Explicação do lang------------------------------->
+
+				<h3>Atributo lang</h3>
+				<p>
+					Deve ser sempre incluido como atributo tag &lt;html&gt;, para declarar o idioma da página web. Isso serve para auxiliar os mecanismos de pesquisa e navegadores. O exemplo a seguir especifica o inglês como o idioma
+				</p>
+
+				<div class="divExemplos">
+					<p>
+						<strong>Código:</strong>
+					</p>
+					<p class="codigo">
+						&lt;!DOCTYPE html&gt;    <br>
+						&lt;html lang="en"&gt;   <br>
+						&lt;body&gt;   <br>
+						...   <br>
+						&lt;/body&gt;   <br>
+						&lt;/html&gt;
+					</p>
+				</div>
+
+				<!-- ---------------------Explicação de classe em JavaScript (só uma palinha) -->
+
+				<h3>classe em JavaScript</h3>
+				<p>
+					O nome da classe também pode ser usado pelo JavaScript para realizar certas tarefas para elementos específicos. O JavaScript pode acessar elementos com um nome de classe específico com o método: getElementsByClassName()
+				</p>
+
+				<div class="divExemplos">
+					<p>
+						<strong>Código:</strong>
+					</p>
+
+					<p class="codigo">
+						&lt;button onclick="myFunction()"&gt;Botão mágico&lt;/button&gt; <br>
+						<br>					
+						&lt;script&gt;<br>
+						..function myFunction() {<br>
+						....var x = document.getElementsByClassName("exemploAtributoClasseJS");<br>
+						....for (var i = 0; i &lt; x.length; i++){<br>	
+						......x[i].style.display ="none";<br>
+						....}<br>
+						}<br>
+						&lt;/script&gt;<br>
+						<br>
+						&lt;div class="exemploAtributoClasseJS"&gt;<br>
+						..Essa div vai sumir assim que pressionar o botão mágico<br>
+						&lt;/div&gt;
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;">
+							<strong>Navegador:</strong>
+						</p>
+
+						<div class="exemploAtributoClasseJS">Essa div vai sumir assim que pressionar o botão mágico</div>
+
+						<script>
+							function myFunction() {
+								var x = document.getElementsByClassName("exemploAtributoClasseJS");
+								for (var i = 0; i < x.length; i++){	
+								x[i].style.display ="none";
+								}
+							}
+						</script>
+
+						<br>
+
+						<div style="text-align: center;">
+							<button class="button" onclick="myFunction()">Botão mágico</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- -------------------------Explicação do id em JavaScript (só uma palinha) -->
+
+				<h3>id em JavaScript</h3>
+				<p>
+					O atributo id também pode ser usado pelo JavaScript para realizar algumas tarefas para aquele
+					elemento específico. O JavaScript pode acessar um elemento com um id específico com o método getElementById()
+				</p>
+
+				<div class="divExemplos">
+
+					<p>
+						<strong>Código:</strong>
+					</p>
+
+					<p class="codigo">
+						&lt;p id="botaoMandao"&gt;Clique no botão abaixo!&lt;/p&gt;   <br>
+						&lt;button onclick="displayResult()">Esse aqui&lt;/button&gt;   <br>
+						&lt;script&gt;   <br>
+						..function displayResult() {   <br>
+						....document.getElementById("botaoMandao").innerHTML ="Obrigada, era só isso.";   <br>
+						}   <br>
+						&lt;/script&gt;   <br>
+					</p>
+
+					<div class="divFilhaExemplos">
+						<p style="text-align: center;"> 
+							<strong>Navegador:</strong>
+						</p>
+
+						<p style="text-align: center;" id="botaoMandao">Clique no botão abaixo!</p>
+
+						<div style="text-align: center;">
+							<button class="button" onclick="displayResult()">Esse aqui</button>
+						</div>
+	
+						<script>
+							function displayResult() {
+								document.getElementById("botaoMandao").innerHTML ="Obrigada, era só isso.";
+							}
+						</script>
+					</div>
+	
+				</div>
+
+			</div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

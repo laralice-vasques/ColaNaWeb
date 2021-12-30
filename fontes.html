@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Fontes</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+					<li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+
+                <h2 style="text-align:center">Fontes</h2> <br>
+
+                <h3 style="text-align:center; font-family: Arial ">Esta fonte é do tipo Arial</h3>
+                <p style="text-align:center; font-family: Arial ">Esta fonte é do tipo Arial</p>
+                <p style="text-align:center; font-family: Arial "><strong>Esta fonte é do tipo Arial</strong></p> 
+                <p style="text-align:center; font-family: Arial "><em>Esta fonte é do tipo Arial</em></p>
+                
+                <br>
+
+                <h3 style="text-align:center; font-family: Times New Roman">Esta fonte é do tipo Times New Roman</h3>
+                <p style="text-align:center; font-family: Times New Roman">Esta fonte é do tipo Times New Roman</p>
+                <p style="text-align:center; font-family: Times New Roman"><strong>Esta fonte é do tipo Times New Roman</strong></p>
+                <p style="text-align:center; font-family: Times New Roman"><em>Esta fonte é do tipo Times New Roman</em></p>
+                
+                <br>
+
+                <h3 style="text-align:center; font-family: Garamond, serif;">Esta fonte é do tipo Garamond, serif </h3>
+                <p style="text-align:center; font-family: Garamond, serif;">Esta fonte é do tipo Garamond, serif </p>
+                <p style="text-align:center; font-family: Garamond, serif;"><strong>Esta fonte é do tipo Garamond, serif</strong> </p>
+                <p style="text-align:center; font-family: Garamond, serif;"><em>Esta fonte é do tipo Garamond, serif</em> </p>
+                
+                <br>
+
+                <h3 style="text-align:center; font-family: 'Courier New', monospace;">Esta fonte é do tipo 'Courier New', monospace </h3>
+                <p style="text-align:center; font-family: 'Courier New', monospace;">Esta fonte é do tipo 'Courier New', monospace </p>
+                <p style="text-align:center; font-family: 'Courier New', monospace;"><strong>Esta fonte é do tipo 'Courier New', monospace </strong></p>
+                <p style="text-align:center; font-family: 'Courier New', monospace;"><em>Esta fonte é do tipo 'Courier New', monospace </em> </p>
+
+                <br>
+
+                <h3 style="text-align:center; font-family: 'Brush Script MT', cursive; ">Esta fonte é do tipo 'Brush Script MT', cursive</h3>
+                <p style="text-align:center; font-family: 'Brush Script MT', cursive; ">Esta fonte é do tipo 'Brush Script MT', cursive</p>
+                <p style="text-align:center; font-family: 'Brush Script MT', cursive; "><strong>Esta fonte é do tipo 'Brush Script MT', cursive</strong></p>
+                <p style="text-align:center; font-family: 'Brush Script MT', cursive; "><em>Esta fonte é do tipo 'Brush Script MT', cursive</em></p>
+
+                <br>
+
+                <h3 style="text-align:center; font-family: Copperplate, Papyrus, fantasy; ">Esta fonte é do tipo Copperplate, Papyrus, fantasy;</h3>
+                <p style="text-align:center; font-family: Copperplate, Papyrus, fantasy; ">Esta fonte é do tipo Copperplate, Papyrus, fantasy;</p>
+                <p style="text-align:center; font-family: Copperplate, Papyrus, fantasy; "><strong>Esta fonte é do tipo Copperplate, Papyrus, fantasy </strong></p>
+                <p style="text-align:center; font-family: Copperplate, Papyrus, fantasy; "><em>Esta fonte é do tipo Copperplate, Papyrus, fantasy</em></p>
+                <br>
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>titulo</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+	</head>
+	<body> <!-- --> <!-- -->
+
+		<header id="topo">
+			<img 
+			style="
+			position: absolute;
+			left: 5px;
+			bottom: 5px;"
+			width="80"  
+			src ="img/borboletaPNG.png" width="100">
+			<div style="text-align: center">
+				<h1>Título do site</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaSscript</a></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h2>What?</h2>
+					<p>Chania is a city on the island of Crete.</p>
+					<h2>Where?</h2>
+					<p>Crete is a Greek island in the Mediterranean Sea.</p>
+					<h2>How?</h2>
+					<p>You can reach Chania airport from all over Europe.</p>
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<img 
+				style="
+				position: absolute;
+				right: 5px;
+				bottom: 5px;"
+				width="80" 
+				src ="img/borboletaPNGinvertida.png" 
+			>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<p>
+					Autora: Laralice Vasques Bonato
+				</p>
+				<p>
+					<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

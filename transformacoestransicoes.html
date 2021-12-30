@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--tipo de codificação pra acentuação, essa tag n tem um fechamento, é automático-->
+		<meta charset="utf-8">
+
+		<title>Transformações e Transições</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Folha de estilos externa-->
+		<link rel="stylesheet" type="text/css" href ="css/newStyle.css">
+
+        <!--Folha de estilos externa para os botões-->
+		<link rel="stylesheet" type="text/css" href ="css/botoesEstilizados.css">
+
+        <!--Folha de estilos externa para montar o menu antigo no final dessa página-->
+		<link rel="stylesheet" type="text/css" href ="css/styleMenuAntigo.css">
+	</head>
+	<body onload="main()"> <!-- --> <!-- -->
+
+		<header id="topo">
+			<div style="text-align: center; width: 100%; height: 90%; border: 1px solid white;">
+				<h1>&#9789; Cola na Web &#9790;</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<!--Esse é o meu menu-->
+			<div class="col-3 menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hyperlink.html">Hyperlinks</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+					<li><a href="tabelas.html">Tabelas</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="cores.html">Cores</a></li>
+					<li><a href="fontes.html">Fontes</a></li>
+					<li><a href="animacoes.html">Animações</a></li>
+					<li><a href="iframes.html">Iframes</a></li>
+					<li><a href="form.html">Formulários</a></li>
+					<li><a href="sintaxecss.html">Sintaxe CSS</a></li>
+					<li><a href="cssboxmodel.html">CSS Box Model</a></li>
+					<li><a href="cssbackgrounds.html">CSS Backgrounds</a></li>
+					<li><a href="cssposition.html">CSS Position</a></li>
+					<li><a href="transformacoestransicoes.html">Tranformações e Transições</a></li>
+					<li><a href="mediaqueries.html">Media Queries</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<!-- -->
+
+			<!-- Essa é a escrita principal da página-->
+			<div class="col-6">
+                <!-- -------------------------------- Tranformações CSS 2D ---------------------------------- -->
+		
+                <h2>Tranformações 2D</h2>
+                <h3>Tranformações CSS 2D</h3>
+
+                <p>As transformações CSS permitem mover, girar, dimensionar e inclinar elementos.</p>
+
+                <p>Propriedade transform e métodos de transformação: com a propriedade transform podemos 
+                    usar os seguintes métodos de transformação 2D:</p>
+
+                <ul type = "circle">
+                    <li>
+                        translate()
+                    </li>
+                    <li>
+                        rotate()
+                    </li>
+                    <li>
+                        scaleX()
+                    </li>
+                    <li>
+                        scaleY()
+                    </li>
+                    <li>
+                        scale()
+                    </li>
+                    <li>
+                        skewX()
+                    </li>
+                    <li>
+                        skewY()
+                    </li>
+                    <li>
+                        skew()
+                    </li>
+                    <li>
+                        matrix()
+                    </li>
+                </ul>
+
+                <!-- ------------------------------ método translate() ---------------------------------- -->
+                
+                <p><strong>Metódo: translate()</strong></p>
+
+                <p>O método translate() move um elemento de sua posição atual de acordo com os parâmetros
+                    fornecidos para os eixos X e Y. <br><br> O exemplo a seguir move o elemento 50 pixels 
+                    para a direita e 70 pixels para baixo de sua posição atual.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " <br>
+                        width="200px" <br>
+                        style="transform: translate(50px, 70px);"&gt;
+                    <br>
+                    
+                        <div class="flex-container">
+                            <div class="caixinhaFlex">
+                                <p>Imagem original</p>
+                                <img src ="img/borboleta2.jpg " width="200px">
+                            </div>
+                            <div class="caixinhaFlex">
+                                <p>Imagem transformada</p>
+                                <img src ="img/borboleta2.jpg " 
+                                    width="200px" 
+                                    style="transform: translate(50px, 70px);">
+                            </div>
+                        </div>                
+                </div><br><br><br><br>
+
+                <!-- -------------------------------- método rotate() ---------------------------------- -->
+
+                <p><strong>Método: rotate()</strong></p>
+
+                <p>O método rotate() gira um elemento no sentido horário ou anti horário de acordo com um
+                    determinado grau. <br>Usar valores negativos girará o elemento no sentido anti horário. 
+                    <br><br>O exemplo a seguir gira o elemento no sentido horário em 20 graus.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " <br>
+                    width="200px" <br>
+                    style="transform: rotate(20deg);"&gt;<br>
+                    <br>
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: rotate(20deg);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- método scale() ---------------------------------- -->
+
+                <p><strong>Método: scale()</strong></p>
+
+                <ul type = "circle">
+                    <li>
+                        O método scale() aumenta ou diminui o tamanho de um elemento de acordo com os 
+                    parâmetros	dados para largura e altura.
+                    </li>
+                    <li>
+                        O método scaleX() aumenta ou diminui a largura de um elemento.
+                    </li>
+                    <li>
+                        O método scaleY() aumenta ou diminui a altura de um elemento.
+                    </li>
+                </ul>
+
+                <p>O exemplo a seguir aumenta o elemento para 1.3 vezes de sua largura original e 
+                    1.4 vezes de sua altura original - scale().
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " <br>
+                    width="200px" <br>
+                    style="transform: scale(1.3, 1.4);"&gt;<br>
+
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: scale(1.3,1.4);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- método scewX() ---------------------------------- -->
+                <p><strong>Método: scewX()</strong></p>
+
+                <p>
+                    O método skewX() inclina um elemento ao longo do eixo X de acordo com o 
+                    ângulo fornecido.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br>
+                    <br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px" style="transform: skewX(20deg);"&gt;<br>
+
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: skewX(20deg);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- método matrix() ---------------------------------- -->
+                <p><strong>Método: matrix()</strong></p>
+
+                <p>O método matrix() combina todos os métodos de transformação 2D em um. <br>Ele usa 
+                    seis parâmetros, contendo funções matemáticas, que permitem girar,
+                    dimensionar, mover (traduzir) e inclinar elementos.
+                </p>
+
+                <p>Os parâmetros são os seguintes: <br>matrix(scaleX(), skewY(), skewX(), scaleY(), 
+                    translateX(), translateY())
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                &lt;img src ="img/borboleta2.jpg " <br>
+                width="200px" <br>
+                style="transform: matrix(1, -0.3, 0, 1, 0, 0);"&gt;<br>
+                <br>
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: matrix(1, -0.3, 0, 1, 0, 0);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- Transformações CSS 3D ---------------------------------- -->
+
+                <h2>Transformações 3D</h2>
+                <h3>Transformações CSS 3D</h3>
+
+                <p>CSS também suporta transformações 3D através de métodos da propriedade transform. Podemos
+                    usar os seguintes métodos de transformação</p>
+
+                    <ul type = "circle">
+                        <li>
+                        rotateX()
+                        </li>
+                        <li>
+                            rotateY()
+                        </li>
+                        <li>
+                            rotateZ()
+                        </li>
+                    </ul>
+
+                <!-- -------------------------------- método rotateX() ---------------------------------- -->
+
+                <p><strong>Método: rotateX()</strong></p>
+
+                <p>
+                    O método rotateX() método gira um elemento em torno de seu eixo X em um determinado grau.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " <br>
+                    width="200px" <br>
+                    style="transform: rotateX(150deg);"&gt;<br>
+                    <br>
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: rotateX(150deg);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- método rotateY() ---------------------------------- -->
+
+                <p><strong>Método: rotateY()</strong></p>
+
+                <p>
+                    O método rotateY() método gira um elemento em torno de seu eixo Y 
+                    em um determinado grau.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt; <br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " <br>
+                    width="200px" <br>
+                    style="transform: rotateY(150deg);"&gt;<br>
+                    <br>
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: rotateY(150deg);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- método rotateZ() ---------------------------------- -->
+
+                <p><strong>Método: rotateZ()</strong></p>
+
+                <p>
+                    O método rotateZ() método gira um elemento em torno de seu eixo Z em 
+                    um determinado grau.
+                </p>
+
+                <div class="divExemplos">
+
+                    &lt;p&gt;Imagem original&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " width="200px"&gt;<br><br>
+                    &lt;p&gt;Imagem transformada&lt;/p&gt;<br>
+                    &lt;img src ="img/borboleta2.jpg " <br>
+                    width="200px" <br>
+                    style="transform: rotateZ(150deg);"&gt;<br>
+                    <br>
+                    <div class="flex-container">
+                        <div class="caixinhaFlex">
+                            <p>Imagem original<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px">
+                        </div>
+                        <div class="caixinhaFlex">
+                            <p>Imagem transformada<br><br></p>
+                            <img src ="img/borboleta2.jpg " width="200px" style="transform: rotateZ(150deg);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------- Transições CSS --------------------------------- -->
+
+                <h2>Transições</h2>
+                <h3>Transições CSS</h3>
+
+                <p>As transições CSS permitem que você altere os valores das propriedades suavemente, 
+                    ao longo de um determinado período.</p>
+
+                <p>Propriedades listadas aqui: </p>
+
+                <ul type = "circle">
+                    <li>
+                        transition
+                    </li>
+                    <li>
+                        transition-delay
+                    </li>
+                    <li>
+                        transition-duration
+                    </li>
+                    <li>
+                        transition-property
+                    </li>
+                    <li>
+                        transition-timing-function
+                    </li>
+                </ul>
+
+                <p>Para criar um efeito de transição, devemos especificar duas coisas:</p>
+
+                <ol>
+                    <li>
+                        a propriedade CSS à qual desejamos adicionar um efeito;
+                    </li>
+                    <li>
+                        a duração do efeito.
+                    </li>
+                </ol>
+
+                <p>Se a parte da duração não for especificada, a transição não terá efeito, porque o valor padrão é 0.</p>
+
+                <div  class="divExemplos">
+                    <p>
+                        div {<br>
+                        .	width: 100px;<br>
+                        .	height: 100px;<br>
+                        .	background: red;<br>
+                        .	transition: width 2s;<br>
+                        }
+                    </p>
+                </div>
+                
+                <p>O efeito de transição começará quando a propriedade CSS especificada (largura) alterar 
+                    o valor. Agora, vamos especificar um novo valor para a propriedade de largura quando o 
+                    usuário passar o mouse sobre o elemento &lt;div&gt;: </p>
+
+                <div class="divExemplos">
+
+                    <p>No meu .css</p>
+
+                    <p>
+                        .transicaoEx1 { <br>
+                            width: 100px;<br>
+                            height: 100px;<br>
+                            background: royalblue;<br>
+                            transition: width 2s;<br>
+                        }<br>
+                        <br>
+                        .transicaoEx1:hover {<br>
+                            width: 300px;<br>
+                        }<br>
+                    </p>
+                    <br>
+
+                    <p>No meu .html</p>
+
+                    &lt;div class="transicaoEx1"&gt;&lt;/div&gt;
+
+                    <br><br>
+
+                    <div class="divFilhaExemplos">
+                        <div class="transicaoEx1"></div>
+                    </div>
+                
+                </div>
+
+                <br><br>
+
+                <!-- -------------------------Curva de velocidade da transição---------------------------- -->
+                <p><strong>Curva de velocidade da transição</strong></p>
+                
+                <p>A propriedade transition timing function especifica a curva de velocidade do efeito de
+                    transição. A propriedade da função de tempo de transição pode ter os seguintes valores:</p>
+
+                <ul type = "circle">
+                    <li>
+                        ease - especifica um efeito de transição com um início lento, depois rápido e, em 
+                        seguida, termina lentamente (este é o padrão);
+                    </li>
+                    <li>
+                        linear - especifica um efeito de transição com a mesma velocidade do início ao fim;
+                    </li>
+                    <li>
+                        ease-in - especifica um efeito de transição com início lento;
+                    </li>
+                    <li>
+                        ease-out - especifica um efeito de transição com atenuação de fim lento;
+                    </li>
+                    <li>
+                        ease-in-out especifica um efeito de transição com um início e fim lentos;
+                    </li>
+                    <li>
+                        cubic-bezier(n, n, n, n) permite definir seus próprios valores em uma função 
+                        cúbica debezier.
+                    </li>
+                </ul>
+
+                <!-- ----------------------Atraso no efeito de transição------------------------ -->
+                <p><strong>Atraso no efeito de transição</strong></p>
+
+                <p>A propriedade transition-delay especifica um atraso (em segundos) para o efeito de transição. 
+                    O exemplo a seguir tem um atraso de 1 segundo antes de começar:
+                </p>
+
+                <div class="divExemplos">
+
+                    <p>No meu .css</p>
+
+                    <p>.transicaoEx2 { <br>
+                    width: 100px;<br>
+                    height: 100px;<br>
+                    background: royalblue;<br>
+                    transition: width 2s;<br>
+                    transition-delay: 1s;<br>
+                    }<br>
+                    <br>
+                    .transicaoEx2:hover {<br>
+                    width: 300px;<br>
+                    }<br>
+                    </p>
+                    
+                    <p>No meu .html</p>
+
+                    &lt;div class="transicaoEx2"&gt;&lt;/div&gt;
+
+                    <br><br>
+
+                    <div class="divFilhaExemplos">
+                        <div class="transicaoEx2"></div>
+                    </div>
+                
+                </div>
+
+                <!-- ----------------------Transição + Transformação------------------------ -->
+                <p><strong>Transição + Transformação</strong></p>
+
+                <p>O exemplo a seguir adiciona um efeito de transição à transformação: </p>
+
+                <div class="divExemplos">
+
+                    <p>No meu .css</p>
+
+                    .transicaoEx3 {<br>
+                    width: 100px;<br>
+                    height: 100px;<br>
+                    background: royalblue;<br>
+                    transition: width 2s, height 2s, transform 2s;<br>
+                    }<br>
+                    <br>
+                    .transicaoEx3:hover {<br>
+                    width: 300px;<br>
+                    height: 300px;<br>
+                    transform: rotate(180deg);<br>
+                    }<br>
+                    
+                    <p>No meu .html</p>
+
+                    &lt;div class="transicaoEx3"&gt;&lt;/div&gt;
+
+                    <br><br>
+
+                    <div class="divFilhaExemplos">
+                        <div class="transicaoEx3"></div>
+                    </div>
+                
+                </div>
+
+                <p>O antigo menu deste site foi feito com transição. Ele era assim: </p>
+
+                <div style="height: 300px; position: relative;">
+                    <div class="side-menu">
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-1</div>
+                        </div>
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-2</div>
+                        </div>
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-3</div>
+                        </div>
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-4</div>
+                        </div>
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-5</div>
+                        </div>
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-6</div>
+                        </div>
+                        <div class="item">
+                            <div><img src ="img/icone.png" width ="15"></div>
+                            <div class="text">Menu-7</div>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+
+            </div>
+			<!-- -->
+
+			<!-- Esse é o quadrado da direita-->
+			<div class="col-3 right">
+				<div class="aside">
+					<h3>Calculadora</h3>
+					
+					<div>
+						<!-- campos de texto -->
+						<label for="number1">Primeiro número</label><br>
+						<input oninput="setNumber1(this)" type="number" id="number1" name="number1"><br>
+
+						<label for="number2">Segundo número</label><br>
+						<input oninput="setNumber2(this)" type="number" id="number2" name="number2"><br>
+
+
+						<!-- radio buttons -->
+						<input oninput="setOperacao('soma')" type="radio" id="soma" name="operacao" value="soma">
+						<label for="soma">Soma</label><br>
+
+						<input oninput="setOperacao('subtracao')" type="radio" id="subtracao" name="operacao" value="subtracao">
+						<label for="subtracao">Subtração</label><br>
+
+						<input oninput="setOperacao('multiplicacao')" type="radio" id="multiplicacao" name="operacao" value="multiplicacao">
+						<label for="multiplicacao">Multiplicação</label><br>
+
+						<input oninput="setOperacao('divisao')" type="radio" id="divisao" name="operacao" value="divisao">
+						<label for="divisao">Divisão</label><br>
+
+						<br><!-- button -->
+						<button class="button" onclick="calcular()">Calcular</button>
+					</div>
+
+					<script src="javascript/calculadora.js"> </script>
+
+					<br>
+					<div style="background-color:white; color: black; border: 1px solid gray; height: 40px;" id="resultado"></div>
+					
+				</div>
+			</div>
+			<!-- -->
+		</div>
+
+		<footer>
+			<div style="text-align: center">
+				<a href="#topo">Volte ao topo</a>
+				<div style="text-align: center;" id="data">
+					<script src="javascript/data.js"></script>
+				</div>
+				<br>
+				<div style="border: 1px solid white; padding: 10px; width: 30%; margin: auto;">
+					<br>
+					<img 
+					width="80px%" 
+					src ="img/ImagemAutorFooter.jpg" 
+					>
+					<p style="text-align: center">
+						Laralice Vasques Bonato<br>
+						<a href="mailto:laralice.vasques@gmail.com">laralice.vasques@gmail.com</a>
+					</p>
+				</div>	
+			</div>		
+		</footer>
+	</body>
+</html>
